@@ -15,13 +15,17 @@ function convertNumber() {
 
   let decimal;
 
-  // Convert input to decimal based on selected base
-  if (inputBase === 'decimal') {
-    decimal = parseInt(inputValue, 10);
-  } else if (inputBase === 'hexadecimal') {
-    decimal = parseInt(inputValue, 16);
+  // Handle Hexadecimal input
+  if (inputBase === 'hexadecimal') {
+    // Remove any '0x' or '0X' prefix before parsing
+    if (inputValue.startsWith('0x') || inputValue.startsWith('0X')) {
+      inputValue = inputValue.slice(2);
+    }
+    decimal = parseInt(inputValue, 16); // Convert hexadecimal to decimal
+  } else if (inputBase === 'decimal') {
+    decimal = parseInt(inputValue, 10); // Decimal to decimal
   } else if (inputBase === 'octal') {
-    decimal = parseInt(inputValue, 8);
+    decimal = parseInt(inputValue, 8); // Octal to decimal
   } else if (inputBase === 'binary') { // Add handling for binary input
     // Check if the input is a valid binary number (only 0s and 1s)
     if (/^[01]+$/.test(inputValue)) {
@@ -46,6 +50,7 @@ function convertNumber() {
   const hexadecimal = '0x' + decimal.toString(16).toUpperCase();  // Hexadecimal with 0x prefix
 
   // Display the results
+  document.getElementById('decimal-output').value = decimal; // Decimal output
   document.getElementById('binary-output').value = binary;
   document.getElementById('octal-output').value = octal;
   document.getElementById('hexadecimal-output').value = hexadecimal;
@@ -59,6 +64,7 @@ function copyToClipboard(elementId) {
 }
 
 function clearOutputs() {
+  document.getElementById('decimal-output').value = '';
   document.getElementById('binary-output').value = '';
   document.getElementById('octal-output').value = '';
   document.getElementById('hexadecimal-output').value = '';

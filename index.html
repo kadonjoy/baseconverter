@@ -35,16 +35,25 @@
       <input type="text" id="input-value" placeholder="Enter number" oninput="convertNumber()" />
     </div>
     <div class="output-container">
+      <!-- Added Decimal output field -->
+      <label for="decimal-output">Decimal:</label>
+      <div class="output-wrapper">
+        <textarea id="decimal-output" readonly></textarea>
+        <button onclick="copyToClipboard('decimal-output')">Copy</button>
+      </div>
+      
       <label for="binary-output">Binary:</label>
       <div class="output-wrapper">
         <textarea id="binary-output" readonly></textarea>
         <button onclick="copyToClipboard('binary-output')">Copy</button>
       </div>
+      
       <label for="octal-output">Octal:</label>
       <div class="output-wrapper">
         <textarea id="octal-output" readonly></textarea>
         <button onclick="copyToClipboard('octal-output')">Copy</button>
       </div>
+      
       <label for="hexadecimal-output">Hexadecimal:</label>
       <div class="output-wrapper">
         <textarea id="hexadecimal-output" readonly></textarea>
