@@ -6,7 +6,7 @@ function formatBinary(binaryStr) {
 
 function convertNumber() {
   const inputBase = document.getElementById('input-base').value;
-  let inputValue = document.getElementById('input-value').value;
+  let inputValue = document.getElementById('input-value').value.trim();
 
   if (!inputValue) {
     clearOutputs();
@@ -19,9 +19,19 @@ function convertNumber() {
   if (inputBase === 'hexadecimal') {
     // Remove any '0x' or '0X' prefix before parsing
     if (inputValue.startsWith('0x') || inputValue.startsWith('0X')) {
-      inputValue = inputValue.slice(2);
+      inputValue = inputValue.slice(2); // Remove 0x or 0X
+    }
+
+    // If the input contains invalid characters (anything other than 0-9, A-F, a-f), it's invalid
+    if (/[^0-9a-fA-F]/.test(inputValue)) {
+      alert("Invalid hexadecimal input! Please enter a valid hexadecimal number.");
+      clearOutputs();
+      return;
     }
     decimal = parseInt(inputValue, 16); // Convert hexadecimal to decimal
+    if (isNaN(decimal)) {
+      return;
+    }
   } else if (inputBase === 'decimal') {
     decimal = parseInt(inputValue, 10); // Decimal to decimal
   } else if (inputBase === 'octal') {
@@ -75,7 +85,7 @@ function switchInputBase() {
   const inputValue = document.getElementById('input-value');
 
   if (inputBase === 'hexadecimal') {
-    inputValue.placeholder = 'Enter Hexadecimal Number';
+    inputValue.placeholder = 'Enter Hexadecimal Number (e.g. 0xA3)';
   } else if (inputBase === 'octal') {
     inputValue.placeholder = 'Enter Octal Number';
   } else if (inputBase === 'binary') {
