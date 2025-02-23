@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Base Conversion Tool</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Base Conversion Tool</h1>
+    <!-- Description section -->
+    <div class="description">
+      <p>Welcome to the Base Conversion Tool! This tool allows you to easily convert numbers between different bases, including:</p>
+      <ul>
+        <li><strong>Decimal (Base 10)</strong>: The standard number system we use in everyday life.</li>
+        <li><strong>Binary (Base 2)</strong>: A number system that uses only two digits, 0 and 1, commonly used in computers.</li>
+        <li><strong>Octal (Base 8)</strong>: A number system using digits 0-7, often used in computing.</li>
+        <li><strong>Hexadecimal (Base 16)</strong>: A number system using digits 0-9 and letters A-F, commonly used in programming and digital electronics.</li>
+      </ul>
+      <p>Simply choose the input base (Decimal, Hexadecimal, Octal, or Binary) and enter your number. The tool will automatically convert your input to the other bases and display the results.</p>
+    </div>
+    
+    <div class="input-container">
+      <label for="input-base">Choose Input Base:</label>
+      <select id="input-base" onchange="switchInputBase()">
+        <option value="decimal">Decimal</option>
+        <option value="hexadecimal">Hexadecimal</option>
+        <option value="octal">Octal</option>
+        <option value="binary">Binary</option> <!-- Added binary option -->
+      </select>
+    </div>
+    <div class="input-container">
+      <label for="input-value">Enter Number:</label>
+      <input type="text" id="input-value" placeholder="Enter number" oninput="convertNumber()" />
+    </div>
+    <div class="output-container">
+      <label for="binary-output">Binary:</label>
+      <div class="output-wrapper">
+        <textarea id="binary-output" readonly></textarea>
+        <button onclick="copyToClipboard('binary-output')">Copy</button>
+      </div>
+      <label for="octal-output">Octal:</label>
+      <div class="output-wrapper">
+        <textarea id="octal-output" readonly></textarea>
+        <button onclick="copyToClipboard('octal-output')">Copy</button>
+      </div>
+      <label for="hexadecimal-output">Hexadecimal:</label>
+      <div class="output-wrapper">
+        <textarea id="hexadecimal-output" readonly></textarea>
+        <button onclick="copyToClipboard('hexadecimal-output')">Copy</button>
+      </div>
+    </div>
+    <button onclick="convertNumber()">Convert</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

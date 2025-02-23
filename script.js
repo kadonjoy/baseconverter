@@ -1,0 +1,87 @@
+function formatBinary(binaryStr) {
+  // Align to 32 bits, pad with 0s, and add a space every 4 bits
+  const paddedBinary = binaryStr.padStart(32, '0');
+  return paddedBinary.replace(/(.{4})/g, '$1 ').trim();
+}
+
+function convertNumber() {
+  const inputBase = document.getElementById('input-base').value;
+  let inputValue = document.getElementById('input-value').value;
+
+  if (!inputValue) {
+    clearOutputs();
+    return;
+  }
+
+  let decimal;
+
+  // Convert input to decimal based on selected base
+  if (inputBase === 'decimal') {
+    decimal = parseInt(inputValue, 10);
+  } else if (inputBase === 'hexadecimal') {
+    decimal = parseInt(inputValue, 16);
+  } else if (inputBase === 'octal') {
+    decimal = parseInt(inputValue, 8);
+  } else if (inputBase === 'binary') { // Add handling for binary input
+    // Check if the input is a valid binary number (only 0s and 1s)
+    if (/^[01]+$/.test(inputValue)) {
+      decimal = parseInt(inputValue, 2);
+    } else {
+      alert("Invalid binary number! Please enter a valid binary number.");
+      clearOutputs();
+      return;
+    }
+  }
+
+  // If the input is not valid
+  if (isNaN(decimal)) {
+    alert("Invalid input! Please enter a valid number.");
+    clearOutputs();
+    return;
+  }
+
+  // Convert to binary, octal, and hexadecimal
+  const binary = formatBinary(decimal.toString(2));
+  const octal = '0' + decimal.toString(8);  // Octal with 0 prefix
+  const hexadecimal = '0x' + decimal.toString(16).toUpperCase();  // Hexadecimal with 0x prefix
+
+  // Display the results
+  document.getElementById('binary-output').value = binary;
+  document.getElementById('octal-output').value = octal;
+  document.getElementById('hexadecimal-output').value = hexadecimal;
+}
+
+function copyToClipboard(elementId) {
+  const textArea = document.getElementById(elementId);
+  textArea.select();
+  document.execCommand('copy');
+  alert(`${elementId.replace('-output', '')} copied to clipboard!`);
+}
+
+function clearOutputs() {
+  document.getElementById('binary-output').value = '';
+  document.getElementById('octal-output').value = '';
+  document.getElementById('hexadecimal-output').value = '';
+}
+
+function switchInputBase() {
+  const inputBase = document.getElementById('input-base').value;
+  const inputValue = document.getElementById('input-value');
+
+  if (inputBase === 'hexadecimal') {
+    inputValue.placeholder = 'Enter Hexadecimal Number';
+  } else if (inputBase === 'octal') {
+    inputValue.placeholder = 'Enter Octal Number';
+  } else if (inputBase === 'binary') {
+    inputValue.placeholder = 'Enter Binary Number'; // Placeholder for binary
+  } else {
+    inputValue.placeholder = 'Enter Decimal Number';
+  }
+
+  // Automatically trigger conversion if there's a value
+  if (inputValue.value) {
+    convertNumber();
+  } else {
+    clearOutputs();
+  }
+}
