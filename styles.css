@@ -19,7 +19,8 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 450px;
+  width: 850px;
+  margin-bottom: 60px;
 }
 
 h1 {
@@ -93,4 +94,12 @@ button {
 
 button:hover {
   background-color: #1976D2;
+}
+
+.center-text {
+  text-align: center;
+}
+
+footer {
+  padding-top: 20px; /* 设置 footer 内部的上边距 */
 }

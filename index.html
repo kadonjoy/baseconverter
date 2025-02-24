@@ -3,12 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Base Conversion Tool</title>
+  <title>Free Base Conversion Tool</title>
+  <meta name="description" content="baseconverter.org is a quick and easy tool for converting between decimal, binary, hexadecimal, and octal numbers. Simply input a number, and it automatically generates equivalents in other formats. ">
+  <link rel="canonical" href="https://baseconverter.org/" />
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>Base Conversion Tool</h1>
+    <h1>Free Base Conversion Tool</h1>
     <!-- Description section -->
     <div class="description">
       <p>Welcome to the Base Conversion Tool! This tool allows you to easily convert numbers between different bases, including:</p>
@@ -60,7 +62,11 @@
         <button onclick="copyToClipboard('hexadecimal-output')">Copy</button>
       </div>
     </div>
-    <button onclick="convertNumber()">Convert</button>
+    <button style="display: block; margin: 0 auto;" onclick="convertNumber()">Convert</button>
+
+    <footer class="footer">
+      <p class="center-text"> &copy; 2025 Free Base Conversion Tool - <a href="https://baseconverter.org" target="_blank" title="Free Base Conversion Tool">baseconverter.org</a>. All rights reserved.</p>
+  </footer>
   </div>
   <script src="script.js"></script>
 </body>
