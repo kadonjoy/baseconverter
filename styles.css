@@ -7,19 +7,37 @@
 body {
   font-family: Arial, sans-serif;
   background-color: #f0f0f0;
-  display: flex;
+  /*display: flex;*/
   justify-content: center;
   align-items: flex-start; /* Changed to flex-start to allow space for the description */
   height: 100vh;
   padding-top: 20px; /* Add padding to the top for spacing */
 }
 
-.container {
+p {
+  line-height: 1.4; /* line height 1.5x */
+  font-size: 16px;
+}
+
+.container, .text-intro-description {
+  width: 50%; /* must set width */
+  margin: 0 auto; /* center horizontally */
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 850px;
+  /*width: 850px;*/
+  margin-bottom: 60px;
+}
+
+.text-intro-area {
+  width: 50%; /* must set width */
+  margin: 0 auto; /* center horizontally */
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /*width: 850px;*/
   margin-bottom: 60px;
 }
 
@@ -28,17 +46,21 @@ h1 {
   margin-bottom: 20px;
 }
 
-.description {
-  font-size: 14px;
+h2 {
+  margin-bottom: 1.5rem;
+}
+
+.text-intro-description {
+  font-size: 16px;
   margin-bottom: 20px;
 }
 
-.description ul {
+.text-intro-description ul {
   margin-top: 10px;
   padding-left: 20px;
 }
 
-.description ul li {
+.text-intro-description ul li {
   margin-bottom: 5px;
 }
 
@@ -101,5 +123,19 @@ button:hover {
 }
 
 footer {
-  padding-top: 20px; /* 设置 footer 内部的上边距 */
+  padding-top: 20px;
+}
+
+.paragraph-p1 {
+  margin-bottom: 20px;
+  flex: 1;
+  /*font-size: 0.95rem;*/
+}
+
+.paragraph-l1 {
+  margin-bottom: 20px;
+  flex: 1;
+  line-height: 1.4; /* line height 1.5x */
+  font-size: 16px;
+  /*font-size: 0.95rem;*/
 }
