@@ -3,14 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Free Base Conversion Tool</title>
-  <meta name="description" content="baseconverter.org is a quick and easy tool for converting between decimal, binary, hexadecimal, and octal numbers. Simply input a number, and it automatically generates equivalents in other formats. ">
+  <title>Free Base Converter Tool</title>
+  <meta name="description" content="baseconverter.org is a quick and easy tool for converting between decimal, binary, hexadecimal, and octal numbers using our base converter. Simply input a number, and it automatically generates equivalents in other formats.">
   <link rel="canonical" href="https://baseconverter.org/" />
-  <link rel="stylesheet" href="styles.css">
+  <!--<link rel="stylesheet" href="dist/styles.css">-->
+  <link rel="stylesheet" href="src/styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Free Base Conversion Tool</h1>
+  <div class="container" id="main-container-id">
+    <h1>Free Base Converter Tool - Easy Base Number Conversion</h1>
     
     <div class="input-container">
       <label for="input-base">Choose Input Base:</label>
@@ -21,7 +22,7 @@
         <option value="binary">Binary</option> <!-- Added binary option -->
       </select>
     </div>
-    <div class="input-container">
+    <div class="input-container" id="input-number-id">
       <label for="input-value">Enter Number:</label>
       <input type="text" id="input-value" placeholder="Enter number" oninput="convertNumber()" />
     </div>
@@ -57,8 +58,8 @@
 
   <!-- Description section -->
   <div class="text-intro-description">
-    <h1>Website Function Introduction</h1>
-    <p>Welcome to the Base Conversion Tool! This tool allows you to easily convert numbers between different bases, including:</p>
+    <h2>Base Converter Tool Function Introduction</h2>
+    <p>Welcome to the Base Converter Tool! This tool allows you to easily convert numbers between different bases, including:</p>
     <ul>
       <li><strong>Decimal (Base 10) to Binary (Base 2)</strong></li>
       <li><strong>Decimal (Base 10) to Octal (Base 8)</strong></li>
@@ -73,34 +74,80 @@
       <li><strong>Octal (Base 8) to Decimal (Base 10)</strong></li>
       <li><strong>Octal (Base 8) to Binary (Base 2)</strong></li>
     </ul>
-    <p>This is a quick and easy tool for converting between decimal, binary, hexadecimal, and octal numbers. Simply choose the input base (Decimal, Hexadecimal, Octal, or Binary) and enter your number. The tool will automatically convert your input to the other bases and display the results.</p>
+    <p>This is a quick and easy base converter tool for converting between decimal, binary, hexadecimal, and octal numbers. Simply choose the input base (Decimal, Hexadecimal, Octal, or Binary) and enter your number. The base converter will automatically convert your input to the other bases and display the results.</p>
+  </div>
+   <!-- Base Converter Table -->
+  <div class="text-intro-description">
+    <h2>Base Converter Table (Decimal to Binary, Octal, and Hexadecimal)</h2>
+    <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; text-align: center;">
+      <thead>
+        <tr>
+          <th>Decimal (Base 10)</th>
+          <th>Binary (Base 2)</th>
+          <th>Octal (Base 8)</th>
+          <th>Hexadecimal (Base 16)</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>0</td><td>0</td><td>0</td><td>0x0</td></tr>
+        <tr><td>1</td><td>1</td><td>1</td><td>0x1</td></tr>
+        <tr><td>2</td><td>10</td><td>2</td><td>0x2</td></tr>
+        <tr><td>3</td><td>11</td><td>3</td><td>0x3</td></tr>
+        <tr><td>4</td><td>100</td><td>4</td><td>0x4</td></tr>
+        <tr><td>5</td><td>101</td><td>5</td><td>0x5</td></tr>
+        <tr><td>6</td><td>110</td><td>6</td><td>0x6</td></tr>
+        <tr><td>7</td><td>111</td><td>7</td><td>0x7</td></tr>
+        <tr><td>8</td><td>1000</td><td>10</td><td>0x8</td></tr>
+        <tr><td>9</td><td>1001</td><td>11</td><td>0x9</td></tr>
+        <tr><td>10</td><td>1010</td><td>12</td><td>0xA</td></tr>
+        <tr><td>11</td><td>1011</td><td>13</td><td>0xB</td></tr>
+        <tr><td>12</td><td>1100</td><td>14</td><td>0xC</td></tr>
+        <tr><td>13</td><td>1101</td><td>15</td><td>0xD</td></tr>
+        <tr><td>14</td><td>1110</td><td>16</td><td>0xE</td></tr>
+        <tr><td>15</td><td>1111</td><td>17</td><td>0xF</td></tr>
+        <tr><td>16</td><td>10000</td><td>20</td><td>0x10</td></tr>
+        <tr><td>17</td><td>10001</td><td>21</td><td>0x11</td></tr>
+        <tr><td>18</td><td>10010</td><td>22</td><td>0x12</td></tr>
+        <tr><td>19</td><td>10011</td><td>23</td><td>0x13</td></tr>
+        <tr><td>20</td><td>10100</td><td>24</td><td>0x14</td></tr>
+        <tr><td>30</td><td>11110</td><td>36</td><td>0x1E</td></tr>
+        <tr><td>40</td><td>101000</td><td>50</td><td>0x28</td></tr>
+        <tr><td>50</td><td>110010</td><td>62</td><td>0x32</td></tr>
+        <tr><td>100</td><td>1100100</td><td>144</td><td>0x64</td></tr>
+        <tr><td>150</td><td>10010110</td><td>226</td><td>0x96</td></tr>
+        <tr><td>200</td><td>11001000</td><td>310</td><td>0xC8</td></tr>
+        <tr><td>255</td><td>11111111</td><td>377</td><td>0xFF</td></tr>
+        <tr><td>1000</td><td>1111101000</td><td>1750</td><td>0x3E8</td></tr>
+        <tr><td>1024</td><td>10000000000</td><td>2000</td><td>0x400</td></tr>
+      </tbody>
+    </table>
   </div>
   <div class="text-intro-description">
-    <h1>Base Number Introduction</h1>
-    <p>Decimal, binary, hexadecimal, and octal are different numeral systems used to represent numbers.</p>
+    <h2>Base Number Introduction for Base Converter</h2>
+    <p>Decimal, binary, hexadecimal, and octal are different numeral systems used to represent numbers. With the help of a base converter, you can easily switch between these systems.</p>
     <ul>
-      <li class ="paragraph-l1"><strong>Decimal (Base 10): </strong>The most commonly used system, consisting of digits from 0 to 9. It is based on powers of 10 and is widely used in daily life and most human-centric applications.</li>
-      <li class ="paragraph-l1"><strong>Hexadecimal (Base 16): </strong>This system uses 16 digits, 0-9 and A-F, where A stands for 10, B for 11, and so on. It is often used in programming and digital systems for its compact representation of binary data.</li>
-      <li class ="paragraph-l1"><strong>Binary (Base 2): </strong>This system uses only two digits, 0 and 1. It is the foundation of all modern computing systems, as computers operate using binary data through electrical signals.</li>
-      <li class ="paragraph-l1"><strong>Octal (Base 8): </strong>Using digits from 0 to 7, the octal system was once commonly used in computing as a shorthand for binary numbers. It is less common today but still appears in some applications.</li>
+      <li class ="paragraph-l1"><strong>Decimal (Base 10): </strong>The most commonly used system, consisting of digits from 0 to 9. It is based on powers of 10 and is widely used in daily life and most human-centric applications. You can easily convert decimal numbers to other bases using a base converter.</li>
+      <li class ="paragraph-l1"><strong>Hexadecimal (Base 16): </strong>This system uses 16 digits, 0-9 and A-F, where A stands for 10, B for 11, and so on. It is often used in programming and digital systems for its compact representation of binary data, and a base converter is perfect for switching between hexadecimal and other formats.</li>
+      <li class ="paragraph-l1"><strong>Binary (Base 2): </strong>This system uses only two digits, 0 and 1. It is the foundation of all modern computing systems, as computers operate using binary data through electrical signals. A base converter makes it easy to convert binary to decimal, hexadecimal, or octal.</li>
+      <li class ="paragraph-l1"><strong>Octal (Base 8): </strong>Using digits from 0 to 7, the octal system was once commonly used in computing as a shorthand for binary numbers. It is less common today but still appears in some applications, and a base converter can quickly transform octal to decimal, binary, or hexadecimal.</li>
     </ul>
-    <h2>What is Decimal (Base 10)</h2>
-    <p class="paragraph-p1">A decimal number, also known as base 10, is a system of counting and representing numbers using ten distinct digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9. The decimal system is the most commonly used numeral system in everyday life, and it is the system we rely on for counting, measuring, and performing basic arithmetic.</p>
-    <p class="paragraph-p1">The decimal system operates on a place-value structure, where the position of each digit represents a different power of 10. For example, in the number 345, the digit 3 represents 3 hundreds (10^2), 4 represents 4 tens (10^1), and 5 represents 5 ones (10^0). This system allows us to express any number, no matter how large or small, using a combination of these ten digits.</p>
-    <p class="paragraph-p1">We use decimal numbers largely because humans historically had ten fingers, making it a natural system for counting. The flexibility of the decimal system means it can represent an infinite range of values, from simple counting to complex calculations. It forms the foundation of most mathematical, scientific, and financial calculations.</p>
-    <h2>What is Hexadecimal (Base 16)</h2>
-    <p class="paragraph-p1">A hexadecimal number, also known as base 16, is a system that uses sixteen distinct symbols to represent numbers. These symbols include the digits 0 through 9 and the letters A through F, where A represents 10, B represents 11, C represents 12, D represents 13, E represents 14, and F represents 15. Hexadecimal is commonly used in computing and digital systems because it provides a more compact and human-readable way to represent binary data.</p>
-    <p class="paragraph-p1">The hexadecimal system operates similarly to the decimal system but is based on powers of 16. Each position in a hexadecimal number represents an increasing power of 16, starting from 16^0 at the rightmost digit. For example, the hexadecimal number 2F3 is equivalent to (2 * 16^2) + (15 * 16^1) + (3 * 16^0), which equals 763 in decimal.</p>
-    <p class="paragraph-p1">Hexadecimal is particularly useful in programming and computer science, as it can easily represent binary values in a more concise form. For instance, a single hexadecimal digit can represent four binary digits (bits), making it easier to work with large binary numbers. It is widely used in contexts such as memory addressing, color codes in web design, and low-level computer programming.</p>
-    <h2>What is Binary (Base 2)</h2>
-    <p class="paragraph-p1">A binary or bin bit represents a single unit of data, either a number or a symbol, in the binary number system. Binary is also known as base 2 because it uses only two digits: 0 and 1. In this system, every number is represented as a combination of these two digits, making it the foundation of modern computing.</p>
-    <p class="paragraph-p1">Binary numbers are commonly used in digital electronics and computing, as computers process information in binary form through electrical signals, which can be either on (1) or off (0). For example, the binary number 1011 represents the decimal number 11, and it is read as one-zero-one-one in base 2.</p>
-    <p class="paragraph-p1">Unlike decimal, which uses a place value system based on powers of 10, binary uses powers of 2. Every position in a binary number represents an increasing power of 2, starting from 2^0 at the rightmost digit. This makes binary a highly efficient system for computers, which operate using this base to perform complex calculations and store data.</p>
-    <p class="paragraph-p1">Although binary numbers are limited to just two digits, they can represent an infinite range of values when combined in larger sequences. This is why binary is essential for all digital computing systems, from simple calculations to complex machine learning algorithms.</p>
-    <h2>What is Octal (Base 8)</h2>
-    <p class="paragraph-p1">An octal number, also known as base 8, is a numeral system that uses eight distinct symbols: 0, 1, 2, 3, 4, 5, 6, and 7. In octal, each digit represents a power of 8, making it a shorthand representation of binary numbers. The octal system is often used in computing and digital systems, especially in older technologies, as it provides a more compact way to express binary data without requiring as many digits as hexadecimal.</p>
-    <p class="paragraph-p1">Each position in an octal number represents an increasing power of 8, starting from 8^0 at the rightmost digit. For example, the octal number 175 is equivalent to (1 * 8^2) + (7 * 8^1) + (5 * 8^0), which equals 125 in decimal. This makes octal a convenient way to represent binary numbers in groups of three bits, as one octal digit corresponds to exactly three binary digits.</p>
-    <p class="paragraph-p1">Although octal is not as commonly used today as binary or hexadecimal, it was once widely used in computer programming and digital electronics. It is still occasionally used in certain contexts, such as file permissions in Unix-based operating systems. The simplicity of the octal system makes it an important part of the history of digital computing.</p>
+    <h3>What is Decimal (Base 10)</h3>
+    <p class="paragraph-p1">A decimal number, also known as base 10, is a system of counting and representing numbers using ten distinct digits: 0, 1, 2, 3, 4, 5, 6, 7, 8, and 9. The decimal system is the most commonly used numeral system in everyday life, and it is the system we rely on for counting, measuring, and performing basic arithmetic. You can convert decimal numbers to binary, hexadecimal, or octal using the base converter tool.</p>
+    <p class="paragraph-p1">The decimal system operates on a place-value structure, where the position of each digit represents a different power of 10. For example, in the number 345, the digit 3 represents 3 hundreds (10^2), 4 represents 4 tens (10^1), and 5 represents 5 ones (10^0). This system allows us to express any number, no matter how large or small, using a combination of these ten digits. With the base converter, this process is simplified for conversion into binary or hexadecimal formats.</p>
+    <p class="paragraph-p1">We use decimal numbers largely because humans historically had ten fingers, making it a natural system for counting. The flexibility of the decimal system means it can represent an infinite range of values, from simple counting to complex calculations. It forms the foundation of most mathematical, scientific, and financial calculations, and a base converter can help you work across different systems easily.</p>
+    <h3>What is Hexadecimal (Base 16)</h3>
+    <p class="paragraph-p1">A hexadecimal number, also known as base 16, is a system that uses sixteen distinct symbols to represent numbers. These symbols include the digits 0 through 9 and the letters A through F, where A represents 10, B represents 11, C represents 12, D represents 13, E represents 14, and F represents 15. Hexadecimal is commonly used in computing and digital systems because it provides a more compact and human-readable way to represent binary data. A base converter is essential when you need to switch between hexadecimal and other number systems.</p>
+    <p class="paragraph-p1">The hexadecimal system operates similarly to the decimal system but is based on powers of 16. Each position in a hexadecimal number represents an increasing power of 16, starting from 16^0 at the rightmost digit. For example, the hexadecimal number 2F3 is equivalent to (2 * 16^2) + (15 * 16^1) + (3 * 16^0), which equals 763 in decimal. With the base converter tool, you can quickly convert hexadecimal numbers into binary, octal, or decimal systems.</p>
+    <p class="paragraph-p1">Hexadecimal is particularly useful in programming and computer science, as it can easily represent binary values in a more concise form. For instance, a single hexadecimal digit can represent four binary digits (bits), making it easier to work with large binary numbers. It is widely used in contexts such as memory addressing, color codes in web design, and low-level computer programming, and a base converter simplifies all these conversions for you.</p>
+    <h3>What is Binary (Base 2)</h3>
+    <p class="paragraph-p1">A binary or bin bit represents a single unit of data, either a number or a symbol, in the binary number system. Binary is also known as base 2 because it uses only two digits: 0 and 1. In this system, every number is represented as a combination of these two digits, making it the foundation of modern computing. You can convert binary to other bases, like hexadecimal and decimal, using the base converter tool.</p>
+    <p class="paragraph-p1">Binary numbers are commonly used in digital electronics and computing, as computers process information in binary form through electrical signals, which can be either on (1) or off (0). For example, the binary number 1011 represents the decimal number 11, and it is read as one-zero-one-one in base 2. With the base converter tool, you can easily switch binary values to other bases for different applications.</p>
+    <p class="paragraph-p1">Unlike decimal, which uses a place value system based on powers of 10, binary uses powers of 2. Every position in a binary number represents an increasing power of 2, starting from 2^0 at the rightmost digit. This makes binary a highly efficient system for computers, which operate using this base to perform complex calculations and store data. The base converter tool is crucial for quickly translating between binary and other systems.</p>
+    <p class="paragraph-p1">Although binary numbers are limited to just two digits, they can represent an infinite range of values when combined in larger sequences. This is why binary is essential for all digital computing systems, from simple calculations to complex machine learning algorithms. A base converter ensures seamless transitions between binary and other number systems.</p>
+    <h3>What is Octal (Base 8)</h3>
+    <p class="paragraph-p1">An octal number, also known as base 8, is a numeral system that uses eight distinct symbols: 0, 1, 2, 3, 4, 5, 6, and 7. In octal, each digit represents a power of 8, making it a shorthand representation of binary numbers. The octal system is often used in computing and digital systems, especially in older technologies, as it provides a more compact way to express binary data without requiring as many digits as hexadecimal. A base converter tool is helpful for converting octal numbers to other systems like binary, decimal, or hexadecimal.</p>
+    <p class="paragraph-p1">Each position in an octal number represents an increasing power of 8, starting from 8^0 at the rightmost digit. For example, the octal number 175 is equivalent to (1 * 8^2) + (7 * 8^1) + (5 * 8^0), which equals 125 in decimal. This makes octal a convenient way to represent binary numbers in groups of three bits, as one octal digit corresponds to exactly three binary digits. With a base converter, you can easily work between octal and other number systems.</p>
+    <p class="paragraph-p1">Although octal is not as commonly used today as binary or hexadecimal, it was once widely used in computer programming and digital electronics. It is still occasionally used in certain contexts, such as file permissions in Unix-based operating systems. The simplicity of the octal system makes it an important part of the history of digital computing, and a base converter makes it easy to handle octal conversions.</p>
     <footer class="footer">
       <p class="center-text"> &copy; 2025 Free Base Conversion Tool - <a href="https://baseconverter.org" target="_blank" title="Free Base Conversion Tool">baseconverter.org</a>. All rights reserved.</p>
     </footer>

@@ -1,3 +1,7 @@
+/*@tailwind base;
+@tailwind components;
+@tailwind utilities;*/
+
 * {
   margin: 0;
   padding: 0;
@@ -30,6 +34,12 @@ p {
   margin-bottom: 60px;
 }
 
+#main-container-id {
+  background-color: #D3D3D3; /* 浅灰色 */
+  padding: 20px;
+  border-radius: 8px;
+}
+
 .text-intro-area {
   width: 50%; /* must set width */
   margin: 0 auto; /* center horizontally */
@@ -47,6 +57,11 @@ h1 {
 }
 
 h2 {
+  margin-bottom: 1.5rem;
+}
+
+h3 {
+  margin-top: 1.5rem;
   margin-bottom: 1.5rem;
 }
 
@@ -68,6 +83,13 @@ h2 {
   margin-bottom: 15px;
 }
 
+input[type="text"], select {
+  background-color: #FFF9C4;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+}
+
 label {
   font-weight: bold;
 }
@@ -82,8 +104,10 @@ input, select, textarea {
 
 textarea {
   height: 50px;
+  font-size: 1.5rem;
   resize: none;
   font-family: monospace;
+  background-color: #F7F7F7;
 }
 
 button {
