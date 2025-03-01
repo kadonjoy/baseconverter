@@ -35,7 +35,7 @@ p {
 }
 
 #main-container-id {
-  background-color: #D3D3D3; /* 浅灰色 */
+  background-color: #D3D3D3; /*  */
   padding: 20px;
   border-radius: 8px;
 }
@@ -162,4 +162,75 @@ footer {
   line-height: 1.4; /* line height 1.5x */
   font-size: 16px;
   /*font-size: 0.95rem;*/
+}
+
+/* base container setting */
+.container {
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+
+  /* desktop */
+  @media (min-width: 1024px) {
+    max-width: 50%;  
+    margin: 0 auto;     /* algin-center */
+    padding: 30px 15px; 
+  }
+}
+
+.input-container, 
+.output-container {
+  width: 100%;
+
+  @media (min-width: 768px) {
+    width: 80%;
+    margin: 15px auto;
+  }
+
+  @media (min-width: 1200px) {
+    width: 80%;
+  }
+}
+
+/*  */
+.conversion-chart {
+  @media (min-width: 992px) {
+    width: 90%;
+    margin: 0 auto;
+
+    table {
+      min-width: auto;
+      width: 100%;
+      table-layout: fixed;
+    }
+  }
+}
+
+/*  */
+.output-wrapper {
+  @media (min-width: 768px) {
+    flex-direction: row;
+    
+    button {
+      width: auto;
+      min-width: 100px;
+    }
+  }
+}
+
+/*  */
+h1 {
+  font-size: 24px;
+  
+  @media (min-width: 768px) {
+    font-size: 32px;   /*  */
+  }
+}
+
+.paragraph-p1 {
+  font-size: 16px;
+  
+  @media (min-width: 768px) {
+    font-size: 18px;   /*  */
+  }
 }
