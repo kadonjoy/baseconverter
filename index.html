@@ -52,7 +52,7 @@
         <button onclick="copyToClipboard('hexadecimal-output')">Copy</button>
       </div>
     </div>
-    <button style="display: block; margin: 0 auto;" onclick="convertNumber()">Convert</button>
+    <button style="display: block; margin: 0 auto;" id = "clearbutton" onclick="clearOutputs()">Clear</button>
 
   </div>
 
@@ -116,63 +116,46 @@
         <tr><td>0</td><td>0</td><td>0</td><td>0x0</td></tr>
         <tr><td>1</td><td>1</td><td>1</td><td>0x1</td></tr>
         <tr><td>2</td><td>10</td><td>2</td><td>0x2</td></tr>
-        <tr><td>3</td><td>11</td><td>3</td><td>0x3</td></tr>
         <tr><td>4</td><td>100</td><td>4</td><td>0x4</td></tr>
-        <tr><td>5</td><td>101</td><td>5</td><td>0x5</td></tr>
-        <tr><td>6</td><td>110</td><td>6</td><td>0x6</td></tr>
-        <tr><td>7</td><td>111</td><td>7</td><td>0x7</td></tr>
         <tr><td>8</td><td>1000</td><td>10</td><td>0x8</td></tr>
-        <tr><td>9</td><td>1001</td><td>11</td><td>0x9</td></tr>
-        <tr><td>10</td><td>1010</td><td>12</td><td>0xA</td></tr>
-        <tr><td>11</td><td>1011</td><td>13</td><td>0xB</td></tr>
-        <tr><td>12</td><td>1100</td><td>14</td><td>0xC</td></tr>
-        <tr><td>13</td><td>1101</td><td>15</td><td>0xD</td></tr>
-        <tr><td>14</td><td>1110</td><td>16</td><td>0xE</td></tr>
         <tr><td>15</td><td>1111</td><td>17</td><td>0xF</td></tr>
         <tr><td>16</td><td>10000</td><td>20</td><td>0x10</td></tr>
-        <tr><td>17</td><td>10001</td><td>21</td><td>0x11</td></tr>
-        <tr><td>18</td><td>10010</td><td>22</td><td>0x12</td></tr>
-        <tr><td>19</td><td>10011</td><td>23</td><td>0x13</td></tr>
-        <tr><td>20</td><td>10100</td><td>24</td><td>0x14</td></tr>
-        <tr><td>30</td><td>11110</td><td>36</td><td>0x1E</td></tr>
-        <tr><td>40</td><td>101000</td><td>50</td><td>0x28</td></tr>
-        <tr><td>50</td><td>110010</td><td>62</td><td>0x32</td></tr>
-        <tr><td>100</td><td>1100100</td><td>144</td><td>0x64</td></tr>
-        <tr><td>150</td><td>10010110</td><td>226</td><td>0x96</td></tr>
-        <tr><td>200</td><td>11001000</td><td>310</td><td>0xC8</td></tr>
+        <tr><td>32</td><td>100000</td><td>40</td><td>0x20</td></tr>
+        <tr><td>64</td><td>1000000</td><td>100</td><td>0x40</td></tr>
+        <tr><td>128</td><td>10000000</td><td>200</td><td>0x80</td></tr>
         <tr><td>255</td><td>11111111</td><td>377</td><td>0xFF</td></tr>
-        <tr><td>1000</td><td>1111101000</td><td>1750</td><td>0x3E8</td></tr>
+        <tr><td>512</td><td>1000000000</td><td>1000</td><td>0x200</td></tr>
         <tr><td>1024</td><td>10000000000</td><td>2000</td><td>0x400</td></tr>
       </tbody>
     </table>
   </div>
   <div class="text-intro-description">
-    <h2>Base Number Introduction for Base Converter</h2>
-    <p>Decimal, binary, hexadecimal, and octal are different numeral systems used to represent numbers. With the help of a base converter, you can easily switch between these systems.</p>
+    <h2>Base Converter: Convert Any Number System</h2>
+    <p>Decimal, binary, hexadecimal, and octal are numeral systems. A base converter allows instant conversion between them.</p>
     <ul>
-      <li class ="paragraph-l1"><strong>Decimal (Base 10): </strong>The most commonly used system, consisting of digits from 0 to 9. It is based on powers of 10 and is widely used in daily life and most human-centric applications. You can easily convert decimal numbers to other bases using a base converter.</li>
-      <li class ="paragraph-l1"><strong>Hexadecimal (Base 16): </strong>This system uses 16 digits, 0-9 and A-F, where A stands for 10, B for 11, and so on. It is often used in programming and digital systems for its compact representation of binary data, and a base converter is perfect for switching between hexadecimal and other formats.</li>
-      <li class ="paragraph-l1"><strong>Binary (Base 2): </strong>This system uses only two digits, 0 and 1. It is the foundation of all modern computing systems, as computers operate using binary data through electrical signals. A base converter makes it easy to convert binary to decimal, hexadecimal, or octal.</li>
-      <li class ="paragraph-l1"><strong>Octal (Base 8): </strong>Using digits from 0 to 7, the octal system was once commonly used in computing as a shorthand for binary numbers. It is less common today but still appears in some applications, and a base converter can quickly transform octal to decimal, binary, or hexadecimal.</li>
+      <li class="paragraph-l1"><strong>Decimal (Base 10):</strong> The standard system using digits 0-9. A base converter quickly converts decimal to binary, octal, or hexadecimal.</li>
+      <li class="paragraph-l1"><strong>Hexadecimal (Base 16):</strong> Uses 0-9 and A-F. A base converter is essential for programming, color codes, and digital memory conversion.</li>
+      <li class="paragraph-l1"><strong>Binary (Base 2):</strong> The foundation of computing, using 0 and 1. A base converter simplifies binary conversion for programming and electronics.</li>
+      <li class="paragraph-l1"><strong>Octal (Base 8):</strong> Uses 0-7 and was widely used in computing. A base converter quickly transforms octal to decimal, binary, or hexadecimal.</li>
     </ul>
-    <h3>What is Decimal (Base 10)</h3>
-    <p class="paragraph-p1">Decimal (base 10) uses 0-9 digits with place-value positioning (10²/10¹/10⁰). Our base converter automatically processes these positional calculations - converting 345₁₀ becomes 101011001₂ (binary) or 159₁₆ (hex) instantly. This fundamental numbering system powers everyday calculations, financial systems, and scientific notation.</p>
+    <h3>Base Converter for Decimal</h3>
+    <p class="paragraph-p1">Decimal (base 10) uses 0-9, and a base converter handles decimal-to-binary, decimal-to-hex, and decimal-to-octal instantly.</p>
     <p class="paragraph-p1">The base converter's decimal conversion module handles three critical operations: 1) 10-to-2 binary translation for computing 2) 10-to-16 hex conversion for programming 3) 10-to-8 octal transforms for legacy systems. For example, converting 1024₁₀ to binary requires precise 2ⁿ calculations - exactly what the base converter's algorithm optimizes.</p>
     <p class="paragraph-p1">While decimal remains humanity's primary system due to 10-digit biology, modern computing demands multi-base interoperability. The base converter bridges this gap through: • Auto-formatting (1000 → 1,000) • Error detection (invalid hex letters) • Batch conversion (multi-number processing). Convert decimal values across 4 numbering systems simultaneously with our smart base converter.</p>    
     
-    <h3>What is Hexadecimal (Base 16)</h3>
-    <p class="paragraph-p1">Hexadecimal (Base 16) uses 16 symbols (0-9 and A-F) where A-F represent 10-15. This compact format is ideal for computing systems and binary data representation. Our base converter simplifies hexadecimal conversions to/from decimal, binary, and octal formats. When working with memory addresses, color codes, or low-level programming, a base converter ensures accurate cross-system translations. Convert hexadecimal values instantly using the base converter's automatic calculation feature.</p>
+    <h3>Base Converter for Hexadecimal</h3>
+    <p class="paragraph-p1">Hexadecimal (base 16) is compact and widely used in computing. A base converter ensures fast hex-to-binary, hex-to-decimal, and hex-to-octal conversions.</p>
     <p class="paragraph-p1">Hexadecimal uses positional notation with 16<sup>n</sup> values, where each digit's position determines its power (16<sup>0</sup> starting right). For example, 2F3<sub>16</sub> converts to 755<sub>10</sub>. Our base converter automatically handles these hexadecimal transformations to binary (base 2), octal (base 8), and decimal (base 10). The base converter's algorithm instantly calculates positional values and letter-number conversions (A=10 to F=15), making cross-system translations effortless. For programming and digital applications, this base converter ensures accurate hexadecimal conversions in real-time.</p>
     <p class="paragraph-p1">In programming and computer science, hexadecimal serves three key functions where a base converter becomes essential: 1) As binary shorthand (1 hex digit = 4 bits), 2) Memory address notation, and 3) RGB color codes. Our base converter streamlines these applications by providing instant hex-to-decimal/binary conversions with automatic error checking. When debugging systems or developing web applications, engineers use this base converter for real-time hexadecimal translations and bitwise operation verification. The tool's dual display (hex and converted bases) ensures precision in critical technical workflows.</p>
     
-    <h3>What is Binary (Base 2)</h3>
-    <p class="paragraph-p1">Binary (base 2) uses 0-1 combinations to form all digital values. Our base converter decodes these sequences into practical formats: 1011₂ becomes 11₁₀ (decimal) or B₁₆ (hex). The base converter handles bitwise translations for electronics design and network protocol analysis with automatic padding correction.</p>
+    <h3>Base Converter for Binary</h3>
+    <p class="paragraph-p1">Binary (base 2) represents digital values. A base converter allows quick conversion between binary, decimal, octal, and hexadecimal formats.</p>
     <p class="paragraph-p1">Digital systems process binary through voltage states (high=1/low=0). The base converter's dual functionality: 1) Converts ASCII text to binary code 2) Translates machine language to human-readable formats. For example, convert 01000001₂ to A (ASCII) using the base converter's character encoding module.</p>
     <p class="paragraph-p1">Binary's power-of-2 system differs fundamentally from decimal. Where 1001₂ = 9₁₀ (1×2³ + 0×2² + 0×2¹ + 1×2⁰), our base converter visually breaks down each bit's positional value during conversion. This feature is critical for computer science education and hardware debugging.</p>
     <p class="paragraph-p1">Though limited to two digits, binary scales infinitely through bit combinations. The base converter manages 64-bit values and beyond, crucial for cryptography and big data applications. Convert lengthy binary strings (e.g., 1010110101110010₂) to compressed hex formats instantly with the base converter's batch processing capability.</p>
     
-    <h3>What is Octal (Base 8)</h3>
-    <p class="paragraph-p1">The octal system (base 8) uses digits 0-7, representing powers of 8. A base converter simplifies conversion between octal, binary, decimal, and hexadecimal. Using a base converter ensures efficient number system conversion.</p>
+    <h3>Base Converter for Octal</h3>
+    <p class="paragraph-p1">Octal (base 8) simplifies binary grouping. A base converter efficiently translates octal to binary, decimal, or hex.</p>
     <p class="paragraph-p1">Each digit in an octal number represents a power of 8, starting from 8^0. For example, 175 in octal equals 125 in decimal. Octal is useful for grouping binary digits in sets of three. A base converter makes it easy to switch between octal and other systems. Using a base converter simplifies number conversions efficiently.</p>
     <p class="paragraph-p1">Octal, once widely used in computing, still appears in Unix file permissions. A base converter helps with octal conversions, and using a base converter makes switching systems easy.</p>
     <footer class="footer">

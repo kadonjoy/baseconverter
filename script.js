@@ -33,6 +33,12 @@ function convertNumber() {
       return;
     }
   } else if (inputBase === 'decimal') {
+    // If the input is not valid
+    if (isNaN(inputValue)) {
+      alert("Invalid input! Please enter a valid number.");
+      clearOutputs();
+      return;
+    }
     decimal = parseInt(inputValue, 10); // Decimal to decimal
   } else if (inputBase === 'octal') {
     decimal = parseInt(inputValue, 8); // Octal to decimal
@@ -74,6 +80,7 @@ function copyToClipboard(elementId) {
 }
 
 function clearOutputs() {
+  document.getElementById('input-value').value = '';
   document.getElementById('decimal-output').value = '';
   document.getElementById('binary-output').value = '';
   document.getElementById('octal-output').value = '';
