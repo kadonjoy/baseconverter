@@ -1,86 +1,119 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+  <meta name="viewport" content="width=device-width, initial-scale=5.0, viewport-fit=cover">
   <title>Base Converter | Fast Decimal, Binary, Hex & Octal Tool</title>
-  <meta name="description" content="Use our free base converter for quick conversions between decimal, binary, hexadecimal, and octal. Base converter delivers instant, accurate results!">
+  <meta name="description"
+    content="Use our free base converter for quick conversions between decimal, binary, hexadecimal, and octal. Base converter delivers instant, accurate results!">
   <!-- Open Graph (OG) Tags for Facebook, LinkedIn, etc. -->
   <meta property="og:title" content="Free Online Base Converter - Instant Number System Conversion">
-  <meta property="og:description" content="Easily convert between decimal, binary, hexadecimal, and octal with our free base converter. Get instant, accurate results!">
+  <meta property="og:description"
+    content="Easily convert between decimal, binary, hexadecimal, and octal with our free base converter. Get instant, accurate results!">
   <meta property="og:image" content="https://baseconverter.org/share-image.jpg">
   <meta property="og:url" content="https://baseconverter.org">
   <meta property="og:type" content="website">
   <!-- Twitter Card Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Free Online Base Converter">
-  <meta name="twitter:description" content="Quickly convert decimal, binary, hexadecimal, and octal numbers with our base converter. Free & instant results!">
+  <meta name="twitter:description"
+    content="Quickly convert decimal, binary, hexadecimal, and octal numbers with our base converter. Free & instant results!">
   <meta name="twitter:image" content="https://baseconverter.org/share-image.jpg">
   <meta name="twitter:site" content="@BaseConverter">
   <link rel="canonical" href="https://baseconverter.org/" />
-  <!--<link rel="stylesheet" href="dist/styles.css">-->
-  <link rel="stylesheet" href="src/styles.css">
+  <link rel="stylesheet" href="dist/styles.css">
 </head>
-<body>
-  <div class="container" id="main-container-id">
-    <h1>Online Base Converter - Multi-Format Number System Calculator</h1>
-    
-    <div class="input-container">
-      <label for="input-base">Choose Input Base:</label>
-      <select id="input-base" onchange="switchInputBase()">
-        <option value="decimal">Decimal</option>
-        <option value="hexadecimal">Hexadecimal</option>
-        <option value="octal">Octal</option>
-        <option value="binary">Binary</option> <!-- Added binary option -->
-      </select>
-    </div>
-    <div class="input-container" id="input-number-id">
-      <label for="input-value">Enter Number:</label>
-      <input type="text" id="input-value" placeholder="Enter number" oninput="convertNumber()" />
-    </div>
-    <div class="output-container">
-      <!-- Added Decimal output field -->
-      <label for="decimal-output">Decimal:</label>
-      <div class="output-wrapper">
-        <textarea id="decimal-output" readonly></textarea>
-        <button onclick="copyToClipboard('decimal-output')">Copy</button>
-      </div>
-      
-      <label for="binary-output">Binary:</label>
-      <div class="output-wrapper">
-        <textarea id="binary-output" readonly></textarea>
-        <button onclick="copyToClipboard('binary-output')">Copy</button>
-      </div>
-      
-      <label for="octal-output">Octal:</label>
-      <div class="output-wrapper">
-        <textarea id="octal-output" readonly></textarea>
-        <button onclick="copyToClipboard('octal-output')">Copy</button>
-      </div>
-      
-      <label for="hexadecimal-output">Hexadecimal:</label>
-      <div class="output-wrapper">
-        <textarea id="hexadecimal-output" readonly></textarea>
-        <button onclick="copyToClipboard('hexadecimal-output')">Copy</button>
-      </div>
-    </div>
-    <button style="display: block; margin: 0 auto;" id = "clearbutton" onclick="clearOutputs()">Clear</button>
 
+<body class="justify-center items-start h-screen pt-5 bg-gray-100 font-sans"> <!-- 添加 pt-20 类以增加顶部填充 -->
+  <header
+    class="bg-gradient-to-br from-green-100 via-sky-50 to-fuchsia-200 text-blue-500 py-2 top-0 left-0 w-full z-50 shadow-lg">
+    <nav class="flex w-full justify-between items-center">
+      <ul class="nav-links flex w-full space-x-4">
+        <li class="flex-grow text-center p-4"><a href="https://baseconverter.org/" target="_blank"
+            class="hover:text-yellow-400 transition duration-300"><strong>Home</strong></a></li>
+        <li class="flex-grow text-center p-4"><a href="https://baseconverter.org/" target="_blank"
+            class="hover:text-yellow-400 transition duration-300"><strong>Number Converter</strong></a></li>
+      </ul>
+    </nav>
+  </header>
+  <div class="flex w-full mx-auto p-4 mt-5">
+    <div class=" mr-5 hidden lg:block lg:w-1/4"></div>
+    <div class="bg-gray-300 p-20 rounded-lg pt-20 w-full lg:w-1/2 border border-gray-300" id="main-container-id">
+      <h1 class="text-center mb-5 text-2xl lg:text-4xl md:text-lg font-bold">Online Base Converter - Multi-Format Number
+        System Calculator</h1>
+      <div class="mb-4">
+        <label for="input-base" class="block font-bold mb-2">Choose Input Base:</label>
+        <select id="input-base" class="w-full p-2 bg-yellow-100 border border-gray-300 rounded"
+          onchange="switchInputBase()">
+          <option value="decimal">Decimal</option>
+          <option value="hexadecimal">Hexadecimal</option>
+          <option value="octal">Octal</option>
+          <option value="binary">Binary</option> <!-- Added binary option -->
+        </select>
+      </div>
+      <div class="mb-4">
+        <label for="input-value" class="block font-bold mb-2">Enter Number:</label>
+        <input type="text" id="input-value" class="w-full p-2 bg-yellow-100 border border-gray-300 rounded"
+          placeholder="Enter number" oninput="convertNumber()" />
+      </div>
+      <div class="mb-4">
+        <!-- Added Decimal output field -->
+        <label for="decimal-output" class="block font-bold mb-2">Decimal:</label>
+        <div class="output-wrapper">
+          <textarea id="decimal-output"
+            class="w-full p-2 bg-gray-100 border border-gray-300 rounded h-12 text-lg resize-none font-mono"
+            readonly></textarea>
+          <button class="px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-600"
+            onclick="copyToClipboard('decimal-output')">Copy</button>
+        </div>
+
+        <label for="binary-output" class="block font-bold mb-2">Binary:</label>
+        <div class="output-wrapper">
+          <textarea id="binary-output"
+            class="w-full p-2 bg-gray-100 border border-gray-300 rounded h-20 text-lg resize-none font-mono"
+            readonly></textarea>
+          <button class="px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-600"
+            onclick="copyToClipboard('binary-output')">Copy</button>
+        </div>
+
+        <label for="octal-output" class="block font-bold mb-2">Octal:</label>
+        <div class="output-wrapper">
+          <textarea id="octal-output"
+            class="w-full p-2 bg-gray-100 border border-gray-300 rounded h-12 text-lg resize-none font-mono"
+            readonly></textarea>
+          <button class="px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-600"
+            onclick="copyToClipboard('octal-output')">Copy</button>
+        </div>
+
+        <label for="hexadecimal-output" class="block font-bold mb-2">Hexadecimal:</label>
+        <div class="output-wrapper">
+          <textarea id="hexadecimal-output"
+            class="w-full p-2 bg-gray-100 border border-gray-300 rounded h-12 text-lg resize-none font-mono"
+            readonly></textarea>
+          <button class="px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-600"
+            onclick="copyToClipboard('hexadecimal-output')">Copy</button>
+        </div>
+      </div>
+      <button style="display: block; margin: 0 auto;" id="clearbutton"
+        class="px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-600" onclick="clearOutputs()">Clear</button>
+    </div>
+    <div class="ml-5 hidden lg:block lg:w-1/4"></div>
   </div>
 
   <!-- Description section -->
-  <div class="text-intro-description">
-    <h2>Why Choose Our Base Converter?</h2>
-    <h3>1. Real-Time Conversion</h3>
+  <div class="container mx-auto bg-white p-5 rounded-lg shadow-md mb-10 w-full lg:w-1/2">
+    <h2 class="mb-6 text-xl font-bold">Why Choose Our Base Converter?</h2>
+    <h3 class="mt-6 mb-6 text-lg font-bold">1. Real-Time Conversion</h3>
     <p>The base converter updates results instantly as you type</p>
-    <h3>2. Multi-Base Support</h3>
+    <h3 class="mt-6 mb-6 text-lg font-bold">2. Multi-Base Support</h3>
     <p>Convert between 4 number systems simultaneously</p>
-    <h3>3. Error Checking</h3>
+    <h3 class="mt-6 mb-6 text-lg font-bold">3. Error Checking</h3>
     <p>Smart base converter detects invalid inputs automatically</p>
   </div>
-  <div class="text-intro-description">
-    <h2>How to Use Base Converter Tool</h2>
-    <h3>1. Choose Input Base:</h3>
+  <div class="container mx-auto bg-white p-5 rounded-lg shadow-md mb-10 w-full lg:w-1/2">
+    <h2 class="mb-6 text-xl font-bold">How to Use Base Converter Tool</h2>
+    <h3 class="mt-6 mb-6 text-lg font-bold">1. Choose Input Base:</h3>
     <p>Select your original number format using our base converter:</p>
     <ul>
       <li><strong>Decimal (Base 10)</strong> - Standard 0-9 system</li>
@@ -88,11 +121,11 @@
       <li><strong>Hexadecimal (Base 16)</strong> - 0-9 and A-F values</li>
       <li><strong>Octal (Base 8)</strong> - Legacy 0-7 system</li>
     </ul>
-  
-    <h3>2. Enter Your Number:</h3>
+
+    <h3 class="mt-6 mb-6 text-lg font-bold">2. Enter Your Number:</h3>
     <p>Type/paste your number in the base converter's input field. The tool automatically validates your entry.</p>
-  
-    <h3>3. View Outputs:</h3>
+
+    <h3 class="mt-6 mb-6 text-lg font-bold">3. View Outputs:</h3>
     <p>Get instant conversions in all formats:</p>
     <ul>
       <li>Decimal conversion</li>
@@ -100,11 +133,11 @@
       <li>Hexadecimal conversion</li>
       <li>Octal conversion</li>
     </ul>
-  
-    <h3>4. Copy Converted Value:</h3>
+
+    <h3 class="mt-6 mb-6 text-lg font-bold">4. Copy Converted Value:</h3>
     <p>One-click copy function for each base converter result output.</p>
-  
-    <h3>5. Convert Again:</h3>
+
+    <h3 class="mt-6 mb-6 text-lg font-bold">5. Convert Again:</h3>
     <p>The smart base converter automatically recalculates when you:</p>
     <ul>
       <li>Change input base</li>
@@ -112,9 +145,9 @@
       <li>Modify existing numbers</li>
     </ul>
   </div>
-   <!-- Base Converter Table -->
-  <div class="text-intro-description">
-    <h2>Base Converter Table (Decimal to Binary, Octal, and Hexadecimal)</h2>
+  <!-- Base Converter Table -->
+  <div class="container mx-auto bg-white p-5 rounded-lg shadow-md mb-10 w-full lg:w-1/2">
+    <h2 class="mb-6 text-xl font-bold">Base Converter Table (Decimal to Binary, Octal, and Hexadecimal)</h2>
     <table border="1" cellpadding="5" cellspacing="0" style="width: 100%; text-align: center;">
       <thead>
         <tr>
@@ -125,55 +158,161 @@
         </tr>
       </thead>
       <tbody>
-        <tr><td>0</td><td>0</td><td>0</td><td>0x0</td></tr>
-        <tr><td>1</td><td>1</td><td>1</td><td>0x1</td></tr>
-        <tr><td>2</td><td>10</td><td>2</td><td>0x2</td></tr>
-        <tr><td>4</td><td>100</td><td>4</td><td>0x4</td></tr>
-        <tr><td>8</td><td>1000</td><td>10</td><td>0x8</td></tr>
-        <tr><td>15</td><td>1111</td><td>17</td><td>0xF</td></tr>
-        <tr><td>16</td><td>10000</td><td>20</td><td>0x10</td></tr>
-        <tr><td>32</td><td>100000</td><td>40</td><td>0x20</td></tr>
-        <tr><td>64</td><td>1000000</td><td>100</td><td>0x40</td></tr>
-        <tr><td>128</td><td>10000000</td><td>200</td><td>0x80</td></tr>
-        <tr><td>255</td><td>11111111</td><td>377</td><td>0xFF</td></tr>
-        <tr><td>512</td><td>1000000000</td><td>1000</td><td>0x200</td></tr>
-        <tr><td>1024</td><td>10000000000</td><td>2000</td><td>0x400</td></tr>
+        <tr>
+          <td>0</td>
+          <td>0</td>
+          <td>0</td>
+          <td>0x0</td>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td>1</td>
+          <td>1</td>
+          <td>0x1</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>10</td>
+          <td>2</td>
+          <td>0x2</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>100</td>
+          <td>4</td>
+          <td>0x4</td>
+        </tr>
+        <tr>
+          <td>8</td>
+          <td>1000</td>
+          <td>10</td>
+          <td>0x8</td>
+        </tr>
+        <tr>
+          <td>15</td>
+          <td>1111</td>
+          <td>17</td>
+          <td>0xF</td>
+        </tr>
+        <tr>
+          <td>16</td>
+          <td>10000</td>
+          <td>20</td>
+          <td>0x10</td>
+        </tr>
+        <tr>
+          <td>32</td>
+          <td>100000</td>
+          <td>40</td>
+          <td>0x20</td>
+        </tr>
+        <tr>
+          <td>64</td>
+          <td>1000000</td>
+          <td>100</td>
+          <td>0x40</td>
+        </tr>
+        <tr>
+          <td>128</td>
+          <td>10000000</td>
+          <td>200</td>
+          <td>0x80</td>
+        </tr>
+        <tr>
+          <td>255</td>
+          <td>11111111</td>
+          <td>377</td>
+          <td>0xFF</td>
+        </tr>
+        <tr>
+          <td>512</td>
+          <td>1000000000</td>
+          <td>1000</td>
+          <td>0x200</td>
+        </tr>
+        <tr>
+          <td>1024</td>
+          <td>10000000000</td>
+          <td>2000</td>
+          <td>0x400</td>
+        </tr>
       </tbody>
     </table>
   </div>
-  <div class="text-intro-description">
-    <h2>Base Converter: Convert Any Number System</h2>
-    <p>Decimal, binary, hexadecimal, and octal are numeral systems. A base converter allows instant conversion between them.</p>
+  <div class="container mx-auto bg-white p-5 rounded-lg shadow-md mb-10 w-full lg:w-1/2">
+    <h2 class="mb-6 text-xl font-bold">Base Converter: Convert Any Number System</h2>
+    <p>Decimal, binary, hexadecimal, and octal are numeral systems. A base converter allows instant conversion between
+      them.</p>
     <ul>
-      <li class="paragraph-l1"><strong>Decimal (Base 10):</strong> The standard system using digits 0-9. A base converter quickly converts decimal to binary, octal, or hexadecimal.</li>
-      <li class="paragraph-l1"><strong>Hexadecimal (Base 16):</strong> Uses 0-9 and A-F. A base converter is essential for programming, color codes, and digital memory conversion.</li>
-      <li class="paragraph-l1"><strong>Binary (Base 2):</strong> The foundation of computing, using 0 and 1. A base converter simplifies binary conversion for programming and electronics.</li>
-      <li class="paragraph-l1"><strong>Octal (Base 8):</strong> Uses 0-7 and was widely used in computing. A base converter quickly transforms octal to decimal, binary, or hexadecimal.</li>
+      <li class="paragraph-l1"><strong>Decimal (Base 10):</strong> The standard system using digits 0-9. A base
+        converter quickly converts decimal to binary, octal, or hexadecimal.</li>
+      <li class="paragraph-l1"><strong>Hexadecimal (Base 16):</strong> Uses 0-9 and A-F. A base converter is essential
+        for programming, color codes, and digital memory conversion.</li>
+      <li class="paragraph-l1"><strong>Binary (Base 2):</strong> The foundation of computing, using 0 and 1. A base
+        converter simplifies binary conversion for programming and electronics.</li>
+      <li class="paragraph-l1"><strong>Octal (Base 8):</strong> Uses 0-7 and was widely used in computing. A base
+        converter quickly transforms octal to decimal, binary, or hexadecimal.</li>
     </ul>
-    <h3>Base Converter for Decimal</h3>
-    <p class="paragraph-p1">Decimal (base 10) uses 0-9, and a base converter handles decimal-to-binary, decimal-to-hex, and decimal-to-octal instantly.</p>
-    <p class="paragraph-p1">The base converter's decimal conversion module handles three critical operations: 1) 10-to-2 binary translation for computing 2) 10-to-16 hex conversion for programming 3) 10-to-8 octal transforms for legacy systems. For example, converting 1024₁₀ to binary requires precise 2ⁿ calculations - exactly what the base converter's algorithm optimizes.</p>
-    <p class="paragraph-p1">While decimal remains humanity's primary system due to 10-digit biology, modern computing demands multi-base interoperability. The base converter bridges this gap through: • Auto-formatting (1000 → 1,000) • Error detection (invalid hex letters) • Batch conversion (multi-number processing). Convert decimal values across 4 numbering systems simultaneously with our smart base converter.</p>    
-    
-    <h3>Base Converter for Hexadecimal</h3>
-    <p class="paragraph-p1">Hexadecimal (base 16) is compact and widely used in computing. A base converter ensures fast hex-to-binary, hex-to-decimal, and hex-to-octal conversions.</p>
-    <p class="paragraph-p1">Hexadecimal uses positional notation with 16<sup>n</sup> values, where each digit's position determines its power (16<sup>0</sup> starting right). For example, 2F3<sub>16</sub> converts to 755<sub>10</sub>. Our base converter automatically handles these hexadecimal transformations to binary (base 2), octal (base 8), and decimal (base 10). The base converter's algorithm instantly calculates positional values and letter-number conversions (A=10 to F=15), making cross-system translations effortless. For programming and digital applications, this base converter ensures accurate hexadecimal conversions in real-time.</p>
-    <p class="paragraph-p1">In programming and computer science, hexadecimal serves three key functions where a base converter becomes essential: 1) As binary shorthand (1 hex digit = 4 bits), 2) Memory address notation, and 3) RGB color codes. Our base converter streamlines these applications by providing instant hex-to-decimal/binary conversions with automatic error checking. When debugging systems or developing web applications, engineers use this base converter for real-time hexadecimal translations and bitwise operation verification. The tool's dual display (hex and converted bases) ensures precision in critical technical workflows.</p>
-    
-    <h3>Base Converter for Binary</h3>
-    <p class="paragraph-p1">Binary (base 2) represents digital values. A base converter allows quick conversion between binary, decimal, octal, and hexadecimal formats.</p>
-    <p class="paragraph-p1">Digital systems process binary through voltage states (high=1/low=0). The base converter's dual functionality: 1) Converts ASCII text to binary code 2) Translates machine language to human-readable formats. For example, convert 01000001₂ to A (ASCII) using the base converter's character encoding module.</p>
-    <p class="paragraph-p1">Binary's power-of-2 system differs fundamentally from decimal. Where 1001₂ = 9₁₀ (1×2³ + 0×2² + 0×2¹ + 1×2⁰), our base converter visually breaks down each bit's positional value during conversion. This feature is critical for computer science education and hardware debugging.</p>
-    <p class="paragraph-p1">Though limited to two digits, binary scales infinitely through bit combinations. The base converter manages 64-bit values and beyond, crucial for cryptography and big data applications. Convert lengthy binary strings (e.g., 1010110101110010₂) to compressed hex formats instantly with the base converter's batch processing capability.</p>
-    
-    <h3>Base Converter for Octal</h3>
-    <p class="paragraph-p1">Octal (base 8) simplifies binary grouping. A base converter efficiently translates octal to binary, decimal, or hex.</p>
-    <p class="paragraph-p1">Each digit in an octal number represents a power of 8, starting from 8^0. For example, 175 in octal equals 125 in decimal. Octal is useful for grouping binary digits in sets of three. A base converter makes it easy to switch between octal and other systems. Using a base converter simplifies number conversions efficiently.</p>
-    <p class="paragraph-p1">Octal, once widely used in computing, still appears in Unix file permissions. A base converter helps with octal conversions, and using a base converter makes switching systems easy.</p>
-    <footer class="footer">
-      <p class="center-text"> &copy; 2025 Free Base Converter Tool - <a href="https://baseconverter.org" target="_blank" title="Free Base Converter Tool">baseconverter.org</a>. All rights reserved.</p>
+    <h3 class="mt-6 mb-6 text-lg font-bold">Base Converter for Decimal</h3>
+    <p class="paragraph-p1">Decimal (base 10) uses 0-9, and a base converter handles decimal-to-binary, decimal-to-hex,
+      and decimal-to-octal instantly.</p>
+    <p class="paragraph-p1">The base converter's decimal conversion module handles three critical operations: <br>1)
+      10-to-2 binary translation for computing <br>2) 10-to-16 hex conversion for programming <br>3) 10-to-8 octal
+      transforms for legacy systems.<br> For example, converting 1024₁₀ to binary requires precise 2ⁿ calculations -
+      exactly what the base converter's algorithm optimizes.</p>
+    <p class="paragraph-p1">While decimal remains humanity's primary system due to 10-digit biology, modern computing
+      demands multi-base interoperability. The base converter bridges this gap through:<br> • Auto-formatting (1000 →
+      1,000)<br> • Error detection (invalid hex letters)<br> • Batch conversion (multi-number processing).<br> Convert
+      decimal values across 4 numbering systems simultaneously with our smart base converter.</p>
+
+    <h3 class="mt-6 mb-6 text-lg font-bold">Base Converter for Hexadecimal</h3>
+    <p class="paragraph-p1">Hexadecimal (base 16) is compact and widely used in computing. A base converter ensures fast
+      hex-to-binary, hex-to-decimal, and hex-to-octal conversions.</p>
+    <p class="paragraph-p1">Hexadecimal uses positional notation with 16<sup>n</sup> values, where each digit's position
+      determines its power (16<sup>0</sup> starting right). For example, 2F3<sub>16</sub> converts to 755<sub>10</sub>.
+      Our base converter automatically handles these hexadecimal transformations to binary (base 2), octal (base 8), and
+      decimal (base 10). The base converter's algorithm instantly calculates positional values and letter-number
+      conversions (A=10 to F=15), making cross-system translations effortless. For programming and digital applications,
+      this base converter ensures accurate hexadecimal conversions in real-time.</p>
+    <p class="paragraph-p1">In programming and computer science, hexadecimal serves three key functions where a base
+      converter becomes essential: <br>1) As binary shorthand (1 hex digit = 4 bits).<br> 2) Memory address
+      notation.<br>3) RGB color codes. <br>Our base converter streamlines these applications by providing instant
+      hex-to-decimal/binary conversions with automatic error checking. When debugging systems or developing web
+      applications, engineers use this base converter for real-time hexadecimal translations and bitwise operation
+      verification. The tool's dual display (hex and converted bases) ensures precision in critical technical workflows.
+    </p>
+
+    <p class="mb-5">Digital systems process binary through voltage states (high=1/low=0). The base converter's dual
+      functionality: <br>1) Converts ASCII text to binary code.<br> 2) Translates machine language to human-readable
+      formats. For example, convert 01000001₂ to A (ASCII) using the base converter's character encoding module.</p>
+    <p class="mb-5">Binary's power-of-2 system differs fundamentally from decimal. Where <br>1001₂ = 9₁₀ (1×2³ + 0×2² +
+      0×2¹ + 1×2⁰)<br>, our base converter visually breaks down each bit's positional value during conversion. This
+      feature is critical for computer science education and hardware debugging.</p>
+    <p class="mb-5">Though limited to two digits, binary scales infinitely through bit combinations. The base converter
+      manages 64-bit values and beyond, crucial for cryptography and big data applications. Convert lengthy binary
+      strings (e.g., 1010110101110010₂) to compressed hex formats instantly with the base converter's batch processing
+      capability.</p>
+    <p class="paragraph-p1">Binary's power-of-2 system differs fundamentally from decimal. Where<br> 1001₂ = 9₁₀ (1×2³ +
+      0×2² + 0×2¹ + 1×2⁰)<br>, our base converter visually breaks down each bit's positional value during conversion.
+      This feature is critical for computer science education and hardware debugging.</p>
+    <h3 class="mt-6 mb-6 text-lg font-bold">Base Converter for Octal</h3>mited to two digits, binary scales infinitely
+    through bit combinations. The base converter manages 64-bit values and beyond, crucial for cryptography and big data
+    applications. Convert lengthy binary strings (e.g., 1010110101110010₂) to compressed hex formats instantly with the
+    base converter's batch processing capability.</p>
+    <p class="mb-5">Octal (base 8) simplifies binary grouping. A base converter efficiently translates octal to binary,
+      decimal, or hex.</p>
+    <p class="mb-5">Each digit in an octal number represents a power of 8, starting from 8^0. For example, 175 in octal
+      equals 125 in decimal. Octal is useful for grouping binary digits in sets of three. A base converter makes it easy
+      to switch between octal and other systems. Using a base converter simplifies number conversions efficiently.</p>
+    <p class="mb-5">Octal, once widely used in computing, still appears in Unix file permissions. A base converter helps
+      with octal conversions, and using a base converter makes switching systems easy.</p>
+    <footer class="mt-5">
+      <p class="text-center"> &copy; 2025 Free Base Converter Tool - <a href="https://baseconverter.org" target="_blank"
+          title="Free Base Converter Tool" class="text-blue-600 hover:text-blue-800">baseconverter.org</a>. All rights
+        reserved.</p>
     </footer>
   </div>
   <script src="script.js"></script>
 </body>
+
 </html>
