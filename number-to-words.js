@@ -7,9 +7,9 @@ function convertNumberToWords() {
 function numberToWords(number) {
     if (isNaN(number)) return "Invalid number";
 
-    const ones = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine"];
+    const ones = ["", "One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine", "Ten"];
     const teens = ["Eleven", "Twelve", "Thirteen", "Fourteen", "Fifteen", "Sixteen", "Seventeen", "Eighteen", "Nineteen"];
-    const tens = ["", "Ten", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
+    const tens = ["", "Twenty", "Thirty", "Forty", "Fifty", "Sixty", "Seventy", "Eighty", "Ninety"];
     const thousands = ["", "Thousand", "Million", "Billion"];
 
     let word = '';
@@ -30,9 +30,9 @@ function numberToWords(number) {
 
     function helper(num) {
         if (num === 0) return "";
-        else if (num < 10) return ones[num] + " ";
+        else if (num <= 10) return ones[num] + " ";
         else if (num < 20) return teens[num - 11] + " ";
-        else if (num < 100) return tens[Math.floor(num / 10)] + " " + helper(num % 10);
+        else if (num < 100) return tens[Math.floor(num / 10) - 1] + " " + helper(num % 10);
         else return ones[Math.floor(num / 100)] + " Hundred " + helper(num % 100);
     }
 }
