@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Octal (Base 8)?</title>
+    <link rel="stylesheet" href="../dist/styles.css">
+    <style>
+        html,
+        body {
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body class="bg-[#2b2f2d] font-sans">
+    <!-- Header -->
+    <header class="bg-gradient-to-br from-green-100 via-sky-50 to-fuchsia-200 text-blue-500 py-4 shadow-lg">
+        <nav class="flex w-full items-center px-36">
+            <a href="https://baseconverter.org/" class="flex items-center">
+                <img src="../images/logo-s.png" alt="Base Converter Logo" class="h-10 w-10 ml-2">
+            </a>
+            <ul class="nav-links flex space-x-4 ml-auto mr-10">
+                <li class="text-center p-4">
+                    <a href="https://baseconverter.org/" target="_blank"
+                        class="hover:text-yellow-400 transition duration-300">
+                        <strong>Home</strong>
+                    </a>
+                </li>
+                <li class="text-center p-4">
+                    <a href="https://baseconverter.org/number-to-words/" target="_blank"
+                        class="hover:text-yellow-400 transition duration-300">
+                        <strong>Number To Words</strong>
+                    </a>
+                </li>
+                <li class="text-center p-4">
+                    <a href="https://baseconverter.org/articles/" target="_blank"
+                        class="hover:text-yellow-400 transition duration-300">
+                        <strong>Articles</strong>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container mx-auto p-6 mt-6" style="margin-top: 24px;">
+        <h1 class="text-3xl font-bold text-center mb-8">What is Octal (Base 8)?</h1>
+
+        <article class="bg-[#d8e2dc] p-6 rounded-lg shadow-md">
+            <p class="text-gray-700 mb-4">
+                Octal, also known as Base 8, is a numbering system that uses eight unique symbols: <strong>0, 1, 2, 3,
+                    4, 5, 6, and 7</strong>. It is primarily used in computing and digital systems as a more compact
+                representation of binary numbers. Each octal digit represents three binary bits, making it an efficient
+                way to express large binary values in a shorter form.
+            </p>
+
+            <h2 class="text-2xl font-bold mt-6 mb-4">How Does Octal Work?</h2>
+            <p class="text-gray-700 mb-4">
+                In the octal system, each position in a number represents a power of 8. For example, the octal number
+                <code>157</code> can be broken down as follows:
+            </p>
+            <ul class="list-disc list-inside mb-4">
+                <li>1 × 8<sup>2</sup> = 64</li>
+                <li>5 × 8<sup>1</sup> = 40</li>
+                <li>7 × 8<sup>0</sup> = 7</li>
+            </ul>
+            <p class="text-gray-700 mb-4">
+                Adding these values together gives <strong>111</strong> in decimal. This positional notation makes the
+                octal system a convenient way to represent binary numbers in a more human-readable format.
+            </p>
+
+            <h2 class="text-2xl font-bold mt-6 mb-4">Why is Octal Important?</h2>
+            <p class="text-gray-700 mb-4">
+                Octal is important because it simplifies the representation of binary numbers. While binary is the
+                native language of computers, it can become cumbersome for humans to read and interpret long binary
+                sequences. Octal reduces the length of binary numbers by grouping them into sets of three bits and
+                representing each group with a single octal digit.
+            </p>
+            <p class="text-gray-700 mb-4">
+                Octal was historically used in early computing systems, particularly in mainframes and minicomputers.
+                Although hexadecimal has largely replaced octal in modern computing, octal remains relevant in specific
+                contexts, such as Unix file permissions and certain low-level programming tasks.
+            </p>
+
+            <h2 class="text-2xl font-bold mt-6 mb-4">Applications of Octal</h2>
+            <p class="text-gray-700 mb-4">
+                Octal is used in various applications, including:
+            </p>
+            <ul class="list-disc list-inside mb-4">
+                <li><strong>Unix File Permissions:</strong> In Unix and Linux systems, file permissions are often
+                    represented in octal notation. For example, <code>755</code> indicates read, write, and execute
+                    permissions for the owner, and read and execute permissions for others.</li>
+                <li><strong>Digital Systems:</strong> Octal is used in some digital systems to simplify binary
+                    representations.</li>
+                <li><strong>Legacy Systems:</strong> Older computing systems and programming languages, such as
+                    assembly, often used octal for memory addresses and instructions.</li>
+            </ul>
+
+            <h2 class="text-2xl font-bold mt-6 mb-4">Octal in Everyday Life</h2>
+            <p class="text-gray-700 mb-4">
+                While octal is not as commonly used as decimal or hexadecimal, it still plays a role in specific
+                technical fields. For example, octal is used in certain types of data encoding and in the design of
+                digital circuits. It is also used in educational settings to teach the fundamentals of number systems
+                and their conversions.
+            </p>
+
+            <h2 class="text-2xl font-bold mt-6 mb-4">Historical Background</h2>
+            <p class="text-gray-700 mb-4">
+                The octal system has its roots in early computing. It was widely used in the 20th century when computer
+                systems were designed with word sizes that were multiples of three bits. This made octal a natural
+                choice for representing binary data. Although hexadecimal has largely replaced octal in modern
+                computing, octal remains an important part of computing history and is still used in specific
+                applications today.
+            </p>
+
+            <h2 class="text-2xl font-bold mt-6 mb-4">Fun Fact About Octal</h2>
+            <p class="text-gray-700 mb-4">
+                Did you know that the octal system is sometimes called "oct" for short? The term "oct" comes from the
+                Latin word <em>octo</em>, meaning "eight," reflecting the system's base of 8.
+            </p>
+
+            <div class="mt-8 text-center">
+                <a href="../articles.html"
+                    class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">←
+                    Back to Blog</a>
+            </div>
+        </article>
+
+        <footer class="mt-5">
+            <p class="text-center"> &copy; 2025 Free Base Converter Tool - <a href="https://baseconverter.org"
+                    target="_blank" title="Free Base Converter Tool"
+                    class="text-blue-600 hover:text-blue-800">baseconverter.org</a>. All rights
+                reserved.</p>
+        </footer>
+    </main>
+</body>
+
+</html>

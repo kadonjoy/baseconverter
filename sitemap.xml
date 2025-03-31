@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <!-- Home Page -->
+    <url>
+        <loc>https://baseconverter.org/</loc>
+        <lastmod>2025-03-31</lastmod>
+        <priority>1.0</priority>
+    </url>
+
+    <!-- Articles Page -->
+    <url>
+        <loc>https://baseconverter.org/articles/</loc>
+        <lastmod>2025-03-31</lastmod>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Decimal Article -->
+    <url>
+        <loc>https://baseconverter.org/blog/decimal.html</loc>
+        <lastmod>2025-03-31</lastmod>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Binary Article -->
+    <url>
+        <loc>https://baseconverter.org/blog/binary.html</loc>
+        <lastmod>2025-03-31</lastmod>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Hexadecimal Article -->
+    <url>
+        <loc>https://baseconverter.org/blog/hex.html</loc>
+        <lastmod>2025-03-31</lastmod>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Octal Article -->
+    <url>
+        <loc>https://baseconverter.org/blog/octal.html</loc>
+        <lastmod>2025-03-31</lastmod>
+        <priority>0.7</priority>
+    </url>
+
+    <!-- Number to Words Page -->
+    <url>
+        <loc>https://baseconverter.org/number-to-words/</loc>
+        <lastmod>2025-03-31</lastmod>
+        <priority>1.0</priority>
+    </url>
+</urlset>
