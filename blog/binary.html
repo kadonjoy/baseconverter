@@ -12,6 +12,49 @@
             margin: 0;
             padding: 0;
         }
+
+        .binary-animation {
+            font-family: monospace;
+            font-size: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .binary-row {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .binary-digit {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            line-height: 2rem;
+            text-align: center;
+            background-color: #f3f4f6;
+            border: 1px solid #d1d5db;
+            border-radius: 0.25rem;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .binary-row.result .binary-digit {
+            background-color: #d1fae5;
+            border-color: #10b981;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 
@@ -135,6 +178,47 @@
                 architects use binary patterns to create visually striking designs that symbolize the intersection of
                 technology and creativity.
             </p>
+
+            <!-- Binary Addition Animation Section -->
+
+            <h2 class="text-2xl font-bold mb-4">Binary Addition Animation</h2>
+            <p class="text-gray-700 mb-4">
+                Understanding binary addition is crucial for learning how computers perform arithmetic operations.
+                Below is an animated demonstration of adding two binary numbers: <code>1011</code> (11 in decimal)
+                and <code>1101</code> (13 in decimal).
+            </p>
+
+            <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                <div class="binary-animation">
+                    <div class="binary-row">
+                        <span class="binary-digit">1</span>
+                        <span class="binary-digit">0</span>
+                        <span class="binary-digit">1</span>
+                        <span class="binary-digit">1</span>
+                    </div>
+                    <div class="binary-row">
+                        <span class="binary-digit">+</span>
+                        <span class="binary-digit">1</span>
+                        <span class="binary-digit">1</span>
+                        <span class="binary-digit">0</span>
+                        <span class="binary-digit">1</span>
+                    </div>
+                    <hr class="my-2 border-gray-400">
+                    <div class="binary-row result">
+                        <span class="binary-digit">1</span>
+                        <span class="binary-digit">1</span>
+                        <span class="binary-digit">0</span>
+                        <span class="binary-digit">0</span>
+                        <span class="binary-digit">0</span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-gray-700 mt-4">
+                The result of adding <code>1011</code> and <code>1101</code> is <code>11000</code> (24 in decimal).
+                The animation demonstrates how binary addition works step by step.
+            </p>
+
 
             <div class="mt-8 text-center">
                 <a href="../articles.html"
