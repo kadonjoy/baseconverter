@@ -70,8 +70,14 @@
       <div class="mb-4">
         <label for="input-value" class="block font-bold mb-2">Enter Number:</label>
         <input type="text" id="input-value" class="w-full p-2 bg-yellow-100 border border-gray-300 rounded"
-          placeholder="Enter number" oninput="convertNumber()" />
+          placeholder="Enter number" />
       </div>
+
+      <div class="text-center">
+        <button id="convert-button" class="px-4 py-2 bg-[#005780] hover:bg-[#07006a] text-white rounded"
+          onclick="convertNumber()">Convert</button>
+      </div>
+
       <div class="mb-4">
         <!-- Added Decimal output field -->
         <label for="decimal-output" class="block font-bold mb-2">Decimal:</label>
@@ -323,9 +329,19 @@
     <p class="mb-5">Octal, once widely used in computing, still appears in Unix file permissions. A base converter helps
       with octal conversions, and using a base converter makes switching systems easy.</p>
     <footer class="mt-5">
-      <p class="text-center"> &copy; 2025 Free Base Converter Tool - <a href="https://baseconverter.org" target="_blank"
-          title="Free Base Converter Tool" class="text-blue-600 hover:text-blue-800">baseconverter.org</a>. All rights
-        reserved.</p>
+      <p class="text-center">
+        &copy; 2025 Free Base Converter Tool -
+        <a href="https://baseconverter.org" target="_blank" title="Free Base Converter Tool"
+          class="text-blue-600 hover:text-blue-800">
+          baseconverter.org
+        </a>. All rights reserved.
+      </p>
+      <p class="text-center mt-2">
+        <a href="https://github.com/kadonjoy/baseconverter/blob/main/README.md" target="_blank"
+          title="GitHub Repository" class="text-blue-600 hover:text-blue-800">
+          View on GitHub
+        </a>
+      </p>
     </footer>
   </div>
   <script src="script.js"></script>

@@ -102,9 +102,9 @@ function switchInputBase() {
   }
 
   // Automatically trigger conversion if there's a value
-  if (inputValue.value) {
-    convertNumber();
-  } else {
-    clearOutputs();
-  }
+  // if (inputValue.value) {
+  //   convertNumber();
+  // } else {
+  //   clearOutputs();
+  // }
 }

@@ -905,6 +905,26 @@ video {
   background-color: rgb(43 47 45 / var(--tw-bg-opacity, 1));
 }
 
+.bg-blue-600 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(37 99 235 / var(--tw-bg-opacity, 1));
+}
+
+.bg-slate-500 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(100 116 139 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#800020\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(128 0 32 / var(--tw-bg-opacity, 1));
+}
+
+.bg-\[\#005780\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 87 128 / var(--tw-bg-opacity, 1));
+}
+
 .bg-gradient-to-br {
   background-image: linear-gradient(to bottom right, var(--tw-gradient-stops));
 }
@@ -1327,6 +1347,26 @@ h1 {
 .hover\:bg-gray-300:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(209 213 219 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-blue-700:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(29 78 216 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-slate-600:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-\[\#6A001B\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(106 0 27 / var(--tw-bg-opacity, 1));
+}
+
+.hover\:bg-\[\#07006a\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(7 0 106 / var(--tw-bg-opacity, 1));
 }
 
 .hover\:text-blue-800:hover {
