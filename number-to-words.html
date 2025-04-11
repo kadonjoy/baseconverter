@@ -60,8 +60,13 @@
             <div class="mb-4">
                 <label for="input-number" class="block font-bold mb-2">Enter Number:</label>
                 <input type="text" id="input-number" class="w-full p-2 bg-yellow-100 border border-gray-300 rounded"
-                    placeholder="Enter number" oninput="convertNumberToWords()" />
+                    placeholder="Enter number" />
             </div>
+            <div class="text-center">
+                <button id="convert-button" class="px-4 py-2 bg-[#005780] hover:bg-[#07006a] text-white rounded"
+                    onclick="convertNumberToWords()">Convert</button>
+            </div>
+
             <div class="mb-4">
                 <label for="words-output" class="block font-bold mb-2">Words:</label>
                 <div class="output-wrapper">
