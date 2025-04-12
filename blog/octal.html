@@ -3,7 +3,39 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Base Converter">
+    <meta name="application-name" content="Base Converter">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="../images/logo-s.png">
+    <meta name="msapplication-config" content="../images/browserconfig.xml">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="manifest" href="../images/site.webmanifest">
+    <link rel="shortcut icon" href="../images/favicon.ico">
+    <link rel="mask-icon" href="../images/safari-pinned-tab.svg" color="#5bbad5">
+    <!-- Open Graph (OG) Tags for Facebook, LinkedIn, etc. -->
+    <meta property="og:title" content="What is Octal (Base 8)?">
+    <meta property="og:description"
+        content="Learn about Octal (Base 8) - the most commonly used numbering system in everyday life. Understand its significance, applications, and how it works.">
+    <meta property="og:image" content="https://baseconverter.org/share-image.jpg">
+    <meta property="og:url" content="https://baseconverter.org/articles/what-is-octal">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What is Octal (Base 8)?">
+    <meta name="twitter:description"
+        content="Learn about Octal (Base 8) - the most commonly used numbering system in everyday life. Understand its significance, applications, and how it works.">
+    <meta name="twitter:image" content="https://baseconverter.org/share-image.jpg">
+    <meta name="twitter:site" content="@BaseConverter">
+    <meta name="keywords"
+        content="octal, base 8, octal addition, octal subtraction, number systems, binary to octal, octal applications, computing, digital systems">
+    <link rel="canonical" href="https://baseconverter.org/articles/what-is-octal" />
     <title>What is Octal (Base 8)?</title>
     <link rel="stylesheet" href="../dist/styles.css">
     <style>
@@ -13,6 +45,65 @@
             padding: 0;
         }
     </style>
+    <style>
+        .octal-animation {
+            font-family: monospace;
+            font-size: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .octal-row {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .octal-digit {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            line-height: 2rem;
+            text-align: center;
+            background-color: #f3f4f6;
+            border: 1px solid #d1d5db;
+            border-radius: 0.25rem;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .octal-row.result .octal-digit {
+            background-color: #d1fae5;
+            border-color: #10b981;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <meta name="description"
+        content="Learn about Octal (Base 8), its significance, applications, and how it simplifies binary representation.">
+    <meta property="og:title" content="What is Octal (Base 8)?">
+    <meta property="og:description"
+        content="Learn about Octal (Base 8), its significance, applications, and how it simplifies binary representation.">
+    <meta property="og:image" content="https://baseconverter.org/share-image.jpg">
+    <meta property="og:url" content="https://baseconverter.org/articles/octal.html">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What is Octal (Base 8)?">
+    <meta name="twitter:description"
+        content="Learn about Octal (Base 8), its significance, applications, and how it simplifies binary representation.">
+    <meta name="twitter:image" content="https://baseconverter.org/share-image.jpg">
+    <meta name="twitter:site" content="@BaseConverter">
+    <link rel="canonical" href="https://baseconverter.org/articles/octal.html" />
 </head>
 
 <body class="bg-[#2b2f2d] font-sans">
@@ -128,7 +219,73 @@
                     Back to Blog</a>
             </div>
         </article>
+        <!-- Octal Addition Animation Section -->
+        <article class="bg-[#d8e2dc] p-6 rounded-lg shadow-md mt-6">
+            <h2 class="text-2xl font-bold mb-4">Octal Addition Animation</h2>
+            <p class="text-gray-700 mb-4">
+                Understanding octal addition is important for working with systems that use base 8. Below is an animated
+                demonstration of adding two octal numbers: <code>157</code> and <code>64</code>.
+            </p>
 
+            <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                <div class="octal-animation">
+                    <div class="octal-row">
+                        <span class="octal-digit">1</span>
+                        <span class="octal-digit">5</span>
+                        <span class="octal-digit">7</span>
+                    </div>
+                    <div class="octal-row">
+                        <span class="octal-digit">+</span>
+                        <span class="octal-digit">6</span>
+                        <span class="octal-digit">4</span>
+                    </div>
+                    <hr class="my-2 border-gray-400">
+                    <div class="octal-row result">
+                        <span class="octal-digit">2</span>
+                        <span class="octal-digit">4</span>
+                        <span class="octal-digit">3</span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-gray-700 mt-4">
+                The result of adding <code>157</code> and <code>64</code> in octal is <code>243</code>. The animation
+                demonstrates how octal addition works step by step.
+            </p>
+        </article>
+        <!-- Octal Subtraction Animation Section -->
+        <article class="bg-[#d8e2dc] p-6 rounded-lg shadow-md mt-6">
+            <h2 class="text-2xl font-bold mb-4">Octal Subtraction Animation</h2>
+            <p class="text-gray-700 mb-4">
+                Understanding octal subtraction is equally important for working with base 8 systems. Below is an
+                animated demonstration of subtracting two octal numbers: <code>157</code> and <code>64</code>.
+            </p>
+
+            <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                <div class="octal-animation">
+                    <div class="octal-row">
+                        <span class="octal-digit">1</span>
+                        <span class="octal-digit">5</span>
+                        <span class="octal-digit">7</span>
+                    </div>
+                    <div class="octal-row">
+                        <span class="octal-digit">-</span>
+                        <span class="octal-digit">6</span>
+                        <span class="octal-digit">4</span>
+                    </div>
+                    <hr class="my-2 border-gray-400">
+                    <div class="octal-row result">
+                        <span class="octal-digit">7</span>
+                        <span class="octal-digit">3</span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-gray-700 mt-4">
+                The result of subtracting <code>64</code> from <code>157</code> in octal is <code>73</code>. The
+                animation demonstrates how octal subtraction works step by step.
+            </p>
+        </article>
         <footer class="mt-5">
             <p class="text-center"> &copy; 2025 Free Base Converter Tool - <a href="https://baseconverter.org"
                     target="_blank" title="Free Base Converter Tool"

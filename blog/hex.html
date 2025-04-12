@@ -4,6 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Learn about hexadecimal (base 16) and its applications in computing. Explore how hexadecimal works, its importance, and fun facts.">
+    <meta name="keywords"
+        content="hexadecimal, base 16, computing, binary, number system, color codes, memory addresses, programming">
+    <meta name="author" content="Base Converter Team">
+    <meta property="og:title" content="What is Hexadecimal (Base 16)?">
+    <meta property="og:description"
+        content="Learn about hexadecimal (base 16) and its applications in computing. Explore how hexadecimal works, its importance, and fun facts.">
+    <meta property="og:image" content="https://baseconverter.org/share-image.jpg">
+    <meta property="og:url" content="https://baseconverter.org/articles/hexadecimal">
+    <meta property="og:type" content="article">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What is Hexadecimal (Base 16)?">
+    <meta name="twitter:description"
+        content="Learn about hexadecimal (base 16) and its applications in computing. Explore how hexadecimal works, its importance, and fun facts.">
+    <meta name="twitter:image" content="https://baseconverter.org/share-image.jpg">
+    <meta name="twitter:site" content="@BaseConverter">
+    <link rel="canonical" href="https://baseconverter.org/articles/hexadecimal" />
+    <link rel="icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" sizes="180x180" href="../images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../images/favicon-16x16.png">
+    <link rel="manifest" href="../images/site.webmanifest">
+    <link rel="mask-icon" href="../images/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#2b2f2d">
+    <meta name="theme-color" content="#2b2f2d">
+    <meta name="google-site-verification" content="your-google-site-verification-code" />
     <title>What is Hexadecimal (Base 16)?</title>
     <link rel="stylesheet" href="../dist/styles.css">
     <style>
@@ -11,6 +38,50 @@
         body {
             margin: 0;
             padding: 0;
+        }
+    </style>
+    <style>
+        .hex-animation {
+            font-family: monospace;
+            font-size: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hex-row {
+            display: flex;
+            gap: 0.5rem;
+        }
+
+        .hex-digit {
+            display: inline-block;
+            width: 2rem;
+            height: 2rem;
+            line-height: 2rem;
+            text-align: center;
+            background-color: #f3f4f6;
+            border: 1px solid #d1d5db;
+            border-radius: 0.25rem;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        .hex-row.result .hex-digit {
+            background-color: #d1fae5;
+            border-color: #10b981;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
         }
     </style>
 </head>
@@ -123,13 +194,78 @@
                 the Greek word <em>hex</em>, meaning "six," reflecting the system's base of 16.
             </p>
 
+
             <div class="mt-8 text-center">
                 <a href="../articles.html"
                     class="px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition">←
                     Back to Blog</a>
             </div>
         </article>
+        <!-- Hexadecimal Addition Animation Section -->
+        <article class="bg-[#d8e2dc] p-6 rounded-lg shadow-md mt-6">
+            <h2 class="text-2xl font-bold mb-4">Hexadecimal Addition Animation</h2>
+            <p class="text-gray-700 mb-4">
+                Understanding hexadecimal addition is crucial for working with low-level data. Below is an animated
+                demonstration of adding two hexadecimal numbers: <code>A3</code> and <code>1F</code>.
+            </p>
 
+            <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                <div class="hex-animation">
+                    <div class="hex-row">
+                        <span class="hex-digit">A</span>
+                        <span class="hex-digit">3</span>
+                    </div>
+                    <div class="hex-row">
+                        <span class="hex-digit">+</span>
+                        <span class="hex-digit">1</span>
+                        <span class="hex-digit">F</span>
+                    </div>
+                    <hr class="my-2 border-gray-400">
+                    <div class="hex-row result">
+                        <span class="hex-digit">C</span>
+                        <span class="hex-digit">2</span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-gray-700 mt-4">
+                The result of adding <code>A3</code> and <code>1F</code> is <code>C2</code>. The animation
+                demonstrates how hexadecimal addition works step by step.
+            </p>
+        </article>
+
+        <!-- Hexadecimal Subtraction Animation Section -->
+        <article class="bg-[#d8e2dc] p-6 rounded-lg shadow-md mt-6">
+            <h2 class="text-2xl font-bold mb-4">Hexadecimal Subtraction Animation</h2>
+            <p class="text-gray-700 mb-4">
+                Hexadecimal subtraction is another fundamental operation. Below is an animated demonstration of
+                subtracting two hexadecimal numbers: <code>A3</code> and <code>1F</code>.
+            </p>
+
+            <div class="bg-white p-4 rounded-lg shadow-md text-center">
+                <div class="hex-animation">
+                    <div class="hex-row">
+                        <span class="hex-digit">A</span>
+                        <span class="hex-digit">3</span>
+                    </div>
+                    <div class="hex-row">
+                        <span class="hex-digit">-</span>
+                        <span class="hex-digit">1</span>
+                        <span class="hex-digit">F</span>
+                    </div>
+                    <hr class="my-2 border-gray-400">
+                    <div class="hex-row result">
+                        <span class="hex-digit">8</span>
+                        <span class="hex-digit">4</span>
+                    </div>
+                </div>
+            </div>
+
+            <p class="text-gray-700 mt-4">
+                The result of subtracting <code>1F</code> from <code>A3</code> is <code>84</code>. The animation
+                demonstrates how hexadecimal subtraction works step by step.
+            </p>
+        </article>
         <footer class="mt-5">
             <p class="text-center"> &copy; 2025 Free Base Converter Tool - <a href="https://baseconverter.org"
                     target="_blank" title="Free Base Converter Tool"
