@@ -3,22 +3,23 @@
     <!-- Home Page -->
     <url>
         <loc>https://baseconverter.org/</loc>
-        <lastmod>2025-03-31</lastmod>
+        <lastmod>2025-04-15</lastmod>
+        <changefreq>daily</changefreq>
         <priority>1.0</priority>
     </url>
 
     <!-- Articles Page -->
     <url>
-        <loc>https://baseconverter.org/articles/</loc>
-        <lastmod>2025-03-31</lastmod>
-        <priority>0.8</priority>
+        <loc>https://baseconverter.org/articles</loc>
+        <lastmod>2025-04-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.7</priority>
     </url>
 
     <!-- Decimal Article -->
     <url>
         <loc>https://baseconverter.org/blog/decimal.html</loc>
-        <lastmod>2025-03-31</lastmod>
-        <priority>0.7</priority>
+        <lastmod>2025-03-31</lastmod>03-31            <priority>0.7</priority>
     </url>
 
     <!-- Binary Article -->
@@ -44,8 +45,25 @@
 
     <!-- Number to Words Page -->
     <url>
-        <loc>https://baseconverter.org/number-to-words/</loc>
-        <lastmod>2025-03-31</lastmod>
-        <priority>1.0</priority>
+        <loc>https://baseconverter.org/number-to-words</loc>
+        <lastmod>2025-04-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <!-- Feet to Centimeters Tool -->
+    <url>
+        <loc>https://baseconverter.org/tools/feet-to-cm.html</loc>
+        <lastmod>2025-04-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
+    </url>
+
+    <!-- Feet to Meters Tool -->
+    <url>
+        <loc>https://baseconverter.org/tools/feet-to-meter.html</loc>
+        <lastmod>2025-04-15</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
     </url>
 </urlset>
