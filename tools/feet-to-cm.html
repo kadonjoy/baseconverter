@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Feet to Centimeters Converter | Convert Feet to Centimeters</title>
+    <meta name="description"
+        content="Use our free feet to centimeters converter for quick conversions. Get instant, accurate results!">
+    <!-- Open Graph (OG) Tags for Facebook, LinkedIn, etc. -->
+    <meta property="og:title" content="Free Online Feet to Centimeters Converter - Instant Conversion">
+    <meta property="og:description"
+        content="Easily convert feet to centimeters with our free converter. Get instant, accurate results!">
+    <meta property="og:image" content="https://baseconverter.org/share-image.jpg">
+    <meta property="og:url" content="https://baseconverter.org/feet-to-cm">
+    <meta property="og:type" content="website">
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Online Feet to Centimeters Converter">
+    <meta name="twitter:description"
+        content="Quickly convert feet to centimeters with our converter. Free & instant results!">
+    <meta name="twitter:image" content="https://baseconverter.org/share-image.jpg">
+    <meta name="twitter:site" content="@BaseConverter">
+    <link rel="canonical" href="https://baseconverter.org/feet-to-cm" />
+    <link rel="stylesheet" href="../dist/styles.css">
+    <meta name="keywords" content="feet to centimeters, convert feet to centimeters, ft to cm, distance conversion">
+</head>
+
+<body class="justify-center items-start h-screen pt-5 bg-gray-100 font-sans">
+    <header
+        class="bg-gradient-to-br from-green-100 via-sky-50 to-fuchsia-200 text-blue-500 py-2 top-0 left-0 w-full z-50 shadow-lg">
+        <nav class="flex w-full items-center px-36">
+            <a href="https://baseconverter.org/" class="flex items-center">
+                <img src="../images/logo-s.png" alt="Base Converter Logo" class="h-10 w-10 ml-2">
+            </a>
+            <ul class="nav-links flex space-x-4 ml-auto mr-10">
+                <li class="text-center p-4">
+                    <a href="https://baseconverter.org/" target="_blank"
+                        class="hover:text-yellow-400 transition duration-300">
+                        <strong>Home</strong>
+                    </a>
+                </li>
+                <li class="text-center p-4">
+                    <a href="https://baseconverter.org/number-to-words/" target="_blank"
+                        class="hover:text-yellow-400 transition duration-300">
+                        <strong>Number To Words</strong>
+                    </a>
+                </li>
+                <li class="text-center p-4">
+                    <a href="https://baseconverter.org/articles/" class="hover:text-yellow-400 transition duration-300">
+                        <strong>Articles</strong>
+                    </a>
+                </li>
+                <li class="relative text-center p-4 group">
+                    <a href="#" class="hover:text-yellow-400 transition duration-300">
+                        <strong>More Tools</strong>
+                    </a>
+                    <ul
+                        class="absolute hidden group-hover:block bg-white text-blue-500 shadow-lg rounded mt-2 py-2 w-48 text-left">
+                        <li><a href="./feet-to-cm.html" class="block px-4 py-2 hover:bg-gray-200">feet to cm</a>
+                        </li>
+                        <li><a href="./feet-to-meter.html" class="block px-4 py-2 hover:bg-gray-200">feet to
+                                meter</a></li>
+                        <!-- <li><a href="https://baseconverter.org/tool3" class="block px-4 py-2 hover:bg-gray-200">Tool 3</a></li> -->
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <div class="flex w-full mx-auto p-4 mt-5">
+        <div class="mr-0 hidden lg:block lg:w-1/4"></div>
+        <div class="bg-gray-300 p-20 rounded-lg pt-2 w-full lg:w-1/2 border border-gray-300" id="main-container-id">
+            <h1 class="text-center mb-5 text-2xl lg:text-4xl md:text-lg font-bold">Convert Feet to Centimeters
+            </h1>
+
+            <!-- New Section: Feet to Centimeters Conversion -->
+            <div class="mb-4">
+                <label for="input-feet-cm" class="block font-bold mb-2">Enter Feet(ft):</label>
+                <input type="text" id="input-feet-cm" class="w-full p-2 bg-yellow-100 border border-gray-300 rounded"
+                    placeholder="Enter feet" />
+            </div>
+            <div class="text-center">
+                <button id="convert-feet-cm-button" class="px-4 py-2 bg-[#005780] hover:bg-[#07006a] text-white rounded"
+                    onclick="convertFeetToCentimeters()">Convert</button>
+            </div>
+
+            <div class="mb-4">
+                <label for="centimeters-output" class="block font-bold mb-2">Centimeters:</label>
+                <div class="output-wrapper">
+                    <textarea id="centimeters-output"
+                        class="w-full p-2 bg-gray-100 border border-gray-300 rounded h-20 text-lg resize-none font-mono"
+                        readonly></textarea>
+                    <button class="px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-600"
+                        onclick="copyToClipboard('centimeters-output')">Copy</button>
+                </div>
+            </div>
+            <button style="display: block; margin: 0 auto;" id="clear-feet-cm-button"
+                class="px-4 py-2 bg-green-600 text-white rounded hover:bg-blue-600"
+                onclick="clearFeetCmOutputs()">Clear</button>
+        </div>
+        <div class="ml-0 hidden lg:block lg:w-1/4"></div>
+    </div>
+
+    <!-- Updated Description section -->
+    <div class="container mx-auto bg-white p-5 rounded-lg shadow-md mb-10 w-full lg:w-1/2 mt-5">
+        <h2 class="mb-6 text-xl font-bold">Why Use Our Conversion Tools?</h2>
+        <h3 class="mt-6 mb-6 text-lg font-bold">1. Real-Time Conversion</h3>
+        <p>The converter updates results instantly as you click convert button</p>
+        <h3 class="mt-6 mb-6 text-lg font-bold">2. Accurate Results</h3>
+        <p>Get precise conversions for feet to centimeters, feet to meters, and other units</p>
+        <h3 class="mt-6 mb-6 text-lg font-bold">3. Easy to Use</h3>
+        <p>Simple interface for quick and efficient conversions</p>
+        <h3 class="mt-6 mb-6 text-lg font-bold">Understanding Feet to Centimeters</h3>
+        <p>The process of converting feet to cm is straightforward. One foot is equivalent to 30.48 cm. This conversion
+            factor is derived from the metric system, which is widely used for its precision and simplicity. By
+            multiplying the number of feet by 30.48, you can easily calculate the equivalent length in centimeters.</p>
+        <h3 class="mt-6 mb-6 text-lg font-bold">A Brief History of Feet and Centimeters</h3>
+        <p>The foot, as a unit of measurement, has historical roots in ancient civilizations, where it was based on the
+            average length of a human foot. Over time, it became standardized to 12 inches. On the other hand, the
+            centimeter is part of the metric system, introduced in France during the late 18th century. Today, the
+            metric system, including centimeters, is the global standard for scientific and everyday measurements.</p>
+        <p>Whether you're converting feet to cm for academic purposes, construction projects, or personal curiosity, our
+            tool ensures accurate and instant results every time.</p>
+    </div>
+
+    <footer class="mt-5">
+        <p class="text-center"> &copy; 2025 Free Feet to Centimeters Converter Tool - <a
+                href="https://baseconverter.org" target="_blank" title="Free Feet to Centimeters Converter Tool"
+                class="text-blue-600 hover:text-blue-800">baseconverter.org</a>. All rights reserved.</p>
+    </footer>
+    <script>
+        function convertFeetToCentimeters() {
+            const feetInput = document.getElementById('input-feet-cm').value;
+            const centimetersOutput = document.getElementById('centimeters-output');
+
+            if (!feetInput || isNaN(feetInput)) {
+                centimetersOutput.value = "Please enter a valid number.";
+                return;
+            }
+
+            const feet = parseFloat(feetInput);
+            const centimeters = feet * 30.48; // Conversion factor
+            centimetersOutput.value = centimeters.toFixed(2) + " cm";
+        }
+
+        function copyToClipboard(elementId) {
+            const textArea = document.getElementById(elementId);
+            textArea.select();
+            document.execCommand('copy');
+            alert('Copied to clipboard!');
+        }
+
+        function clearFeetCmOutputs() {
+            document.getElementById('input-feet-cm').value = '';
+            document.getElementById('centimeters-output').value = '';
+        }
+    </script>
+</body>
+
+</html>
