@@ -221,10 +221,11 @@
                     }
 
                     if (Math.floor(group / 100) > 0) {
-                        groupWords = ones[Math.floor(group / 100)] + " hundred " + groupWords;
+                        groupWords = ones[Math.floor(group / 100)] + " hundred" + groupWords;
                     }
 
-                    word = groupWords + (thousands[groupIndex] || `group${groupIndex}`) + " " + word;
+                    // Only append the unit if groupIndex > 0
+                    word = groupWords + (groupIndex > 0 ? (thousands[groupIndex] || `group${groupIndex}`) : "") + " " + word;
                 }
 
                 groupIndex++;
