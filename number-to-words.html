@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="viewport" content="width=device-width, initial-scale=cover">
     <title>Number to Words Converter | Convert Numbers to English Words</title>
     <meta name="description"
         content="Use our free number to words converter for quick conversions of numbers to English words. Get instant, accurate results!">
@@ -25,6 +25,7 @@
     <link rel="stylesheet" href="dist/styles.css">
     <meta name="keywords"
         content="number to words, convert number to words, number to English words, numbers in english, number in words, spell out numbers">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bignumber.js/9.1.1/bignumber.min.js"></script>
 </head>
 
 <body class="justify-center items-start h-screen pt-5 bg-gray-100 font-sans">
@@ -142,6 +143,8 @@
             our powerful conversion tool.</p>
     </div>
 
+    <script type="text/javascript"
+        src="//www.highperformanceformat.com/f086d16920414da3cb3861491df72b15/invoke.js"></script>
     <footer class="mt-5">
         <p class="text-center"> &copy; 2025 Free Number to Words Converter Tool - <a
                 href="https://baseconverter.org/number-to-words/" target="_blank"
@@ -155,6 +158,80 @@
             t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
             y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script", "r2pxme3v7n");
+
+        function convertNumberToWords() {
+            const numberInput = document.getElementById('input-number').value;
+            const wordsOutput = document.getElementById('words-output');
+
+            if (!numberInput || isNaN(numberInput)) {
+                wordsOutput.value = "Please enter a valid number.";
+                return;
+            }
+
+            try {
+                const BigNumber = window.BigNumber;
+                const number = new BigNumber(numberInput);
+
+                if (number.isNaN()) {
+                    wordsOutput.value = "Invalid number.";
+                    return;
+                }
+
+                const words = numberToWords(number.toFixed()); // Convert to words
+                wordsOutput.value = words;
+            } catch (error) {
+                wordsOutput.value = "Error in conversion. Please check your input.";
+            }
+        }
+
+        function numberToWords(number) {
+            const BigNumber = window.BigNumber;
+            const ones = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"];
+            const teens = ["", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
+            const tens = ["", "ten", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+            let thousands = ["", "thousand", "million", "billion", "trillion", "quadrillion", "quintillion"];
+
+            // Dynamically extend the thousands array for larger numbers
+            const generateSuffixes = (base, count) => {
+                const suffixes = [];
+                for (let i = 1; i <= count; i++) {
+                    suffixes.push(`${base}${i}`);
+                }
+                return suffixes;
+            };
+            thousands = thousands.concat(generateSuffixes("sextillion", 10)); // Extend for larger numbers
+
+            if (number === "0") return "zero";
+
+            let word = "";
+            let numStr = new BigNumber(number).toFixed(); // Ensure the number is a string
+            let groupIndex = 0;
+
+            while (numStr.length > 0) {
+                const group = parseInt(numStr.slice(-3), 10);
+                numStr = numStr.slice(0, -3);
+
+                if (group > 0) {
+                    let groupWords = "";
+
+                    if (group % 100 < 20 && group % 100 > 10) {
+                        groupWords = teens[group % 10] + " ";
+                    } else {
+                        groupWords = tens[Math.floor((group % 100) / 10)] + " " + ones[group % 10] + " ";
+                    }
+
+                    if (Math.floor(group / 100) > 0) {
+                        groupWords = ones[Math.floor(group / 100)] + " hundred " + groupWords;
+                    }
+
+                    word = groupWords + (thousands[groupIndex] || `group${groupIndex}`) + " " + word;
+                }
+
+                groupIndex++;
+            }
+
+            return word.trim();
+        }
     </script>
 </body>
 
