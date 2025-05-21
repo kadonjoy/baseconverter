@@ -51,6 +51,17 @@ The tool supports conversions between four major number systems:
 - **Hexadecimal (Base 16)**: A base 16 system that uses digits 0-9 and letters A-F to represent values.
 - **Octal (Base 8)**: A base 8 system that uses digits from 0 to 7.
 
+## Why Use Number To Words Tool?
+
+[Number To Words](https://baseconverter.org/number-to-words/) is a handy tool that instantly converts any number into its English words representation. Whether you need to write checks, prepare financial documents, teach students, or simply want to learn how numbers are read in English, this tool makes it easy. Just enter any integer or decimal, and you'll get the correct English phrase in one click. The interface is simple and user-friendly, suitable for all users.
+
+- Instantly converts any number (including large numbers and decimals) to standard English words
+- Useful for finance, education, document writing, and more
+- One-click copy for easy use in other applications
+- Free, no registration required, and works on all devices
+
+Try it here: [https://baseconverter.org/number-to-words/](https://baseconverter.org/number-to-words/)
+
 ## Why Use Base Converter?
 
 - **Programming and Development**: Quickly convert between decimal, binary, hexadecimal, and octal systems for use in software development, debugging, or understanding low-level operations.
