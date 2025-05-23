@@ -101,10 +101,20 @@ function switchInputBase() {
     inputValue.placeholder = 'Enter Decimal Number';
   }
 
-  // Automatically trigger conversion if there's a value
-  // if (inputValue.value) {
-  //   convertNumber();
-  // } else {
-  //   clearOutputs();
-  // }
 }
+
+// 在页面加载后自动绑定输入事件，实现自动转换
+window.addEventListener('DOMContentLoaded', function () {
+  document.getElementById('input-value').addEventListener('input', function () {
+    if (this.value) {
+      convertNumber();
+    } else {
+      clearOutputs();
+    }
+  });
+  // 页面加载后如果输入框有值，自动转换
+  var inputValue = document.getElementById('input-value').value;
+  if (inputValue) {
+    convertNumber();
+  }
+});
